@@ -1,0 +1,46 @@
+docker run -p --name solr-server 8983:8983 -t solr
+docker run -d --name my-php-webserver -p 8080:80 -v /path/to/your/php/files:/var/www/html/ php:apache
+
+
+cd /home/alexandros/projects/retrieval/project-1
+docker compose up -d
+
+// to get container IPAddress
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id
+
+
+''' works
+curl -X POST -H 'Content-Type: application/json' --data-binary @tmp.json http://localhost:8983/solr/new_authors/update/json/docs?commit=true
+'''
+
+'''
+curl -X POST -H 'Content-Type: application/json' --data-binary '
+{
+      "type": "book",
+      "author": "Alexandros Maragkakis",
+      "title": "A Music Book",
+      "publisher": "Publishers Inc.",
+      "year": 2022,
+      "edition": "2nd"
+}' http://localhost:8983/solr/new_core/update/json/docs?commit=true
+'''
+
+
+# automated ranking based on tf?
+
+# works
+curl 'http://localhost:8983/solr/new_authors/select?hl.fl=*&hl.usePhraseHighLighter=true&hl=true&indent=true&q.op=OR&q=hci&useParams='
+
+
+# delete all
+<delete><query>*:*</query></delete>
+
+
+# update a document using id
+curl http://localhost:8983/solr/update -H "Content-Type: application/json" -d '
+{
+  "id": "123",
+  "title": "New Title",
+  "description": "New Description"
+}'
+

@@ -1,0 +1,16 @@
+@inproceedings{DBLP:conf/mocast/KontaxisTA21,
+  author    = {Dimitrios E. Kontaxis and
+               George V. Tsoulos and
+               Georgia E. Athanasiadou},
+  title     = {Wireless Sensor Network Topology Design for Building Information Modelling},
+  booktitle = {10th International Conference on Modern Circuits and Systems Technologies,
+               {MOCAST} 2021, Thessaloniki, Greece, July 5-7, 2021},
+  pages     = {1--4},
+  publisher = {{IEEE}},
+  year      = {2021},
+  url       = {https://doi.org/10.1109/MOCAST52088.2021.9493367},
+  doi       = {10.1109/MOCAST52088.2021.9493367},
+  timestamp = {Mon, 02 Aug 2021 16:38:24 +0200},
+  biburl    = {https://dblp.org/rec/conf/mocast/KontaxisTA21.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}

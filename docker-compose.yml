@@ -1,0 +1,23 @@
+version: "1.0"
+
+services:
+  web-app:
+    image: php:apache
+    ports:
+      - 8088:80
+    volumes:
+      - ./:/var/www/html
+      - ./custom_init:/custom_init
+    entrypoint: custom_init/init.bash
+    
+
+  solr:
+    image: solr:latest
+    ports:
+      - 8983:8983
+    volumes:
+      - data:/var/solr
+    
+    
+volumes:
+  data:
