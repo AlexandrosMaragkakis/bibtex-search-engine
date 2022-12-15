@@ -62,6 +62,13 @@
         // bibtex file case
         if($extension != "zip"){
             $output = shell_exec('python3 ../scripts/preprocess.py -bibtex '.$filename);
+            $myfile = fopen("result.txt", "r") or die("Unable to open file!");
+            $result = fread($myfile,filesize("result.txt")).rtrim(' ');
+            if($result != "SUCCESS"){
+                echo "FAILURE";
+                exec('rm result.txt');
+                exit(1);
+            }
             $output = shell_exec("curl -X POST -H 'Content-Type: application/json' --data-binary @tmp.json http://solr:8983/solr/new_authors/update/json/docs?commit=true");
             exec('rm tmp.json && rm '.$filename);
             $json = json_decode($output);

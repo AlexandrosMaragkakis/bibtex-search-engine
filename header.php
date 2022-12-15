@@ -9,9 +9,6 @@ if (performance.navigation.type == 2) {
 
 <body>
 
-
-
-
     <head>
         <title>ASTERAS</title>
         <meta charset="utf-8">

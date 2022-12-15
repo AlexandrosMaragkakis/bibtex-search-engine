@@ -25,13 +25,18 @@ def find_full_name(name, authors):
         authors = SPECIAL_CHAR_REGEX.sub(' ', string=authors)
         authors = authors.split(' and\n')
         for author in authors:
+
             if name.lower() in author.lower():
+
                 return re.sub('\s+', ' ', string=author).rstrip().lstrip()
     except:
         # single author
         # ki omws katafera na to petyxw
 
         return authors
+    with open("result.txt", "w") as f:
+        f.write("FAILURE")
+    exit(1)
 
 
 def is_indexed(name):
@@ -130,14 +135,13 @@ def preprocess_bibtex(filename):
 
     id = is_indexed(name)
 
+    with open('result.txt', 'w') as f:
+        f.write("SUCCESS")
+
     if id:
         status = delete_author(id)
-        if status != 'SUCCESS':
-            with open('result.txt', 'w') as f:
-                f.write(status)
-        else:
-            with open('result.txt', 'w') as f:
-                f.write(status)
+        with open('result.txt', 'w') as f:
+            f.write(status)
 
     output = {'author': name, 'title': '', 'booktitle': '', 'journal': ''}
 
