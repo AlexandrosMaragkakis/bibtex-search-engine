@@ -2,7 +2,7 @@
 require_once('header.php');
 ?>
 
-</style>
+
 <main>
 
     <form action="includes/search.inc.php" method="post">
