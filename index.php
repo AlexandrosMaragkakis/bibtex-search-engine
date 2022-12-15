@@ -2,14 +2,45 @@
 require_once('header.php');
 ?>
 
+<style>
+form {
+    margin: auto;
+    text-align: center;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 35px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 40px
+}
+</style>
+
 
 <main>
 
     <form action="includes/search.inc.php" method="post">
-        Search for an author: <br>
-        <input autofocus required type="text" name="searchbar">
-        <input type="submit" name="query" class="gbutton" value="Go">
+        <p>Search for an author:</p>
+        <input autofocus required type="text" name="searchbar"><input type="submit" name="query" class="gbutton"
+            value="Go">
+        <br>
+
+        <label><input type="radio" name="mode" value="normal" style="height: 12px; width: 12px;" checked> Normal
+            search</label>
+        <label><input type="radio" name="mode" value="author" style="height: 12px; width: 12px;"> Search by
+            author</label>
+        <label><input type="radio" name="mode" value="title" style="height: 12px; width: 12px;"> Search by title</label>
+        <label><input type="radio" name="mode" value="booktitle" style="height: 12px; width: 12px;"> Search by book
+            title</label>
+        <label><input type="radio" name="mode" value="journal" style="height: 12px; width: 12px;"> Search by
+            journal</label>
+        <br>
     </form>
+
+
+
 </main>
 
 
