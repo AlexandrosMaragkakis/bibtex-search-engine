@@ -6,7 +6,7 @@
         $name = $_POST['name'];
 
         // perform a search query for the input name
-        $solr_server = 'http://solr:8983/solr/new_authors/';
+        $solr_server = 'http://solr:8983/solr/final_authors/';
         $solr_api_start = 'select?fl=id&indent=true&q.op=AND&q=author%3A%20';
         $solr_api_end = '&rows=10&useParams=$wh=json';
         $name = $_POST['name'];
@@ -39,7 +39,7 @@
             }  
         }
 
-        $output = shell_exec("curl -X POST -H 'Content-Type: application/json' --data-binary @tmp.json http://solr:8983/solr/new_authors/update/json/docs?commit=true");
+        $output = shell_exec("curl -X POST -H 'Content-Type: application/json' --data-binary @tmp.json http://solr:8983/solr/final_authors/update/json/docs?commit=true");
         $json = json_decode($output);
         $status = $json->responseHeader->status;
         if ($status == 0) {
@@ -69,7 +69,7 @@
                 exec('rm result.txt');
                 exit(1);
             }
-            $output = shell_exec("curl -X POST -H 'Content-Type: application/json' --data-binary @tmp.json http://solr:8983/solr/new_authors/update/json/docs?commit=true");
+            $output = shell_exec("curl -X POST -H 'Content-Type: application/json' --data-binary @tmp.json http://solr:8983/solr/final_authors/update/json/docs?commit=true");
             exec('rm tmp.json && rm '.$filename);
             $json = json_decode($output);
             $status = $json->responseHeader->status;

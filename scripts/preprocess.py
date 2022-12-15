@@ -46,7 +46,7 @@ def is_indexed(name):
     except:
         pass
 
-    solr_server = 'http://solr:8983/solr/new_authors/'
+    solr_server = 'http://solr:8983/solr/final_authors/'
     solr_api_start = 'select?fl=id&indent=true&q.op=AND&q=author%3A%20'
     solr_api_end = '&rows=10&useParams=$wh=json'
     curl_request = "curl -X POST " + solr_server + \
@@ -63,7 +63,7 @@ def is_indexed(name):
 
 def delete_author(id):
 
-    solr_server = 'http://solr:8983/solr/new_authors/'
+    solr_server = 'http://solr:8983/solr/final_authors/'
     solr_api = 'update?commit=true -H "Content-Type: text/xml" --data-binary '
     delete_xml = '<delete><query>' + id + '</query></delete>'
     curl_request = "curl -X POST " + solr_server + \

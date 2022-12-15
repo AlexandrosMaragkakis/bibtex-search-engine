@@ -3,9 +3,26 @@ require_once('header.php');
 ?>
 
 <style>
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+
 form {
     margin: auto;
     text-align: center;
+}
+
+.results-input {
+    width: 60px;
+    margin-left: 10px;
+}
+
+.boolean-input {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
 }
 
 p {
@@ -20,24 +37,31 @@ p {
 
 
 <main>
+    <div class="search-container">
+        <form action="includes/search.inc.php" method="post">
+            <p>Search ASTERAS:</p>
+            <label>Number of Results: <input type="number" class="results-input" name="num-results" min="1" max="100"
+                    value="10"></label>
+            <label>Boolean search: <input type="checkbox" name="boolean-search" class="boolean-input" value="True"
+                    unchecked></label>
+            <input autofocus required type="text" name="query"><input type="submit" name="submit" class="gbutton"
+                value="Go">
+            <br>
+            <label><input type="radio" name="mode" value="normal" style="height: 12px; width: 12px;" checked> Just
+                search!</label>
+            <label><input type="radio" name="mode" value="author" style="height: 12px; width: 12px;"> Search by
+                author</label>
+            <label><input type="radio" name="mode" value="title" style="height: 12px; width: 12px;"> Search by
+                title</label>
+            <label><input type="radio" name="mode" value="booktitle" style="height: 12px; width: 12px;"> Search by book
+                title</label>
+            <label><input type="radio" name="mode" value="journal" style="height: 12px; width: 12px;"> Search by
+                journal</label>
 
-    <form action="includes/search.inc.php" method="post">
-        <p>Search for an author:</p>
-        <input autofocus required type="text" name="searchbar"><input type="submit" name="query" class="gbutton"
-            value="Go">
-        <br>
-
-        <label><input type="radio" name="mode" value="normal" style="height: 12px; width: 12px;" checked> Normal
-            search</label>
-        <label><input type="radio" name="mode" value="author" style="height: 12px; width: 12px;"> Search by
-            author</label>
-        <label><input type="radio" name="mode" value="title" style="height: 12px; width: 12px;"> Search by title</label>
-        <label><input type="radio" name="mode" value="booktitle" style="height: 12px; width: 12px;"> Search by book
-            title</label>
-        <label><input type="radio" name="mode" value="journal" style="height: 12px; width: 12px;"> Search by
-            journal</label>
-        <br>
-    </form>
+            <br>
+        </form>
+    </div>
+    <hr>
 
 
 

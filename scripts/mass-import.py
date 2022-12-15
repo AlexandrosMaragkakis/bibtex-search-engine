@@ -43,7 +43,7 @@ def call_preprocess(files):
     path = 'python3 ../scripts/preprocess.py -bibtex '
     for file in files:
         os.system(path+file)
-        curl_request = "curl -X POST -H 'Content-Type: application/json' --data-binary @tmp.json http://solr:8983/solr/new_authors/update/json/docs?commit=true"
+        curl_request = "curl -X POST -H 'Content-Type: application/json' --data-binary @tmp.json http://solr:8983/solr/final_authors/update/json/docs?commit=true"
         # os.popen() is like os.system() but returns output value
         response = os.popen(curl_request).read()
         response_dict = json.loads(response)

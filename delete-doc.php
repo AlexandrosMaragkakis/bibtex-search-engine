@@ -8,7 +8,7 @@ require_once('header.php');
         <br><br>
         <?php 
     
-        $solr_server = 'http://solr:8983/solr/new_authors/';
+        $solr_server = 'http://solr:8983/solr/final_authors/';
         $solr_api = 'select?indent=true&q.op=OR&q=*%3A*&rows=0&useParams=&wt=json';
         $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
 
@@ -23,7 +23,7 @@ require_once('header.php');
         <?php 
     
     // Set the URL of the Solr server and the API endpoint to use.
-    $solr_server = 'http://solr:8983/solr/new_authors/';
+    $solr_server = 'http://solr:8983/solr/final_authors/';
     $solr_api = 'select?fl=author%2Cid&indent=true&q.op=OR&q=*%3A*&rows=1000&useParams=';
 
     // Make a POST request to the Solr server and retrieve the response.

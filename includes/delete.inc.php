@@ -5,7 +5,7 @@
     case 'Delete':
         
         $selectedDocIds = $_POST['doc-id'];
-        $solr_server = 'http://solr:8983/solr/new_authors/';
+        $solr_server = 'http://solr:8983/solr/final_authors/';
         $solr_api = 'update?commit=true -H "Content-Type: text/xml" --data-binary ';
         
     
@@ -22,7 +22,7 @@
         break;
         
     case 'Delete-all':
-        $solr_server = 'http://solr:8983/solr/new_authors/';
+        $solr_server = 'http://solr:8983/solr/final_authors/';
         $solr_api = 'update?commit=true -H "Content-Type: text/xml" --data-binary ';
         $delete_xml = '<delete><query>*:*</query></delete>';
         $output = shell_exec("curl -X POST ".$solr_server.$solr_api."'".$delete_xml."'");
