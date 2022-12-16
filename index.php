@@ -42,8 +42,7 @@ p {
             <p>Search ASTERAS:</p>
             <label>Number of Results: <input type="number" class="results-input" name="num-results" min="1" max="100"
                     value="10"></label>
-            <label>Boolean search: <input type="checkbox" name="boolean-search" class="boolean-input" value="True"
-                    unchecked></label>
+
             <input autofocus required type="text" name="query"><input type="submit" name="submit" class="gbutton"
                 value="Go">
             <br>
