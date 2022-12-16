@@ -17,7 +17,9 @@ if (performance.navigation.type == 2) {
     <link rel="icon" href="/media/images/icons8-sun-star-16.png">
 </head>
 <header class="col-s-12 col-m-12 col-l-12">
-    <h1>ASTERAS<img src="/media/images/icons8-sun-star-48.png">&nbsp BibTeX Search Engine</h1>
+    <a href="index.php" style="text-decoration: none;color: #000000;">
+        <h1>ASTERAS<img src="/media/images/icons8-sun-star-48.png">&nbsp BibTeX Search Engine</h1>
+    </a>
 </header>
 <nav class="header-nav">
     <ul class="list">

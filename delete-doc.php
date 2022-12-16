@@ -3,11 +3,11 @@ require_once('header.php');
 ?>
 
 
-<body onunload="refreshPage()">
-    <main>
-        <br><br>
-        <?php 
-    
+
+<main>
+    <br><br>
+    <?php 
+        
         $solr_server = 'http://solr:8983/solr/final_authors/';
         $solr_api = 'select?indent=true&q.op=OR&q=*%3A*&rows=0&useParams=&wt=json';
         $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
@@ -18,9 +18,9 @@ require_once('header.php');
         //$numFound = $response['response']['numFound'];
         echo '<p>&nbsp&nbsp&nbspNumber of documents in the index: '.$numFound.'</p>';
     ?>
-        <br>
-        <hr>
-        <?php 
+    <br>
+    <hr>
+    <?php 
     
     // Set the URL of the Solr server and the API endpoint to use.
     $solr_server = 'http://solr:8983/solr/final_authors/';
@@ -49,14 +49,14 @@ require_once('header.php');
 
     ?>
 
-        <hr>
-        <hr>
-        <form id="form2" action="includes/delete.inc.php" method="post">
-            &nbsp&nbsp&nbspDelete <b>all</b> index entries<br><br>
-            &nbsp&nbsp&nbsp<input type="submit" name="submit" class="gbutton" value="Delete-all">
-        </form>
+    <hr>
+    <hr>
+    <form id="form2" action="includes/delete.inc.php" method="post">
+        &nbsp&nbsp&nbspDelete <b>all</b> index entries<br><br>
+        &nbsp&nbsp&nbsp<input type="submit" name="submit" class="gbutton" value="Delete-all">
+    </form>
 
-    </main>
+</main>
 
 </body>
 
