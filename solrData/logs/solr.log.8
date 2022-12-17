@@ -1,0 +1,539 @@
+2022-12-16 12:59:38.433 INFO  (main) [] o.e.j.u.log Logging initialized @900ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-12-16 12:59:38.643 INFO  (main) [] o.e.j.s.Server jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 17.0.5+8
+2022-12-16 12:59:38.970 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2022-12-16 12:59:38.981 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.1.0
+2022-12-16 12:59:38.981 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2022-12-16 12:59:38.981 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /opt/solr
+2022-12-16 12:59:38.981 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2022-12-16T12:59:38.981815457Z
+2022-12-16 12:59:38.988 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr Home: /var/solr/data (source: system property: solr.solr.home)
+2022-12-16 12:59:38.990 INFO  (main) [] o.a.s.c.SolrXmlConfig Loading solr.xml from /var/solr/data/solr.xml
+2022-12-16 12:59:39.068 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/opt/solr/lib]
+2022-12-16 12:59:39.746 WARN  (main) [] o.a.s.h.c.HttpShardHandlerFactory Property 'shardsWhitelist' is deprecated, please use 'allowUrls' instead.
+2022-12-16 12:59:40.002 WARN  (main) [] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2022-12-16 12:59:40.004 WARN  (main) [] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2022-12-16 12:59:40.174 INFO  (main) [] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /var/solr/data
+2022-12-16 12:59:40.175 INFO  (main) [] o.a.s.c.CorePropertiesLocator Cores are: [final_authors]
+2022-12-16 12:59:40.179 INFO  (coreLoadExecutor-10-thread-1) [] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient core cache for max 2147483647 cores with initial capacity of 1024
+2022-12-16 12:59:40.236 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.3.0
+2022-12-16 12:59:40.255 INFO  (main) [] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@76a36b71{/solr,file:///opt/solr-9.1.0/server/solr-webapp/webapp/,AVAILABLE}{/opt/solr-9.1.0/server/solr-webapp/webapp}
+2022-12-16 12:59:40.263 INFO  (main) [] o.e.j.s.RequestLogWriter Opened /var/solr/logs/2022_12_16.request.log
+2022-12-16 12:59:40.272 INFO  (main) [] o.e.j.s.AbstractConnector Started ServerConnector@7fe7c640{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-12-16 12:59:40.272 INFO  (main) [] o.e.j.s.Server Started @2740ms
+2022-12-16 12:59:40.307 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.s.IndexSchema Schema name=default-config
+2022-12-16 12:59:40.519 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2022-12-16 12:59:40.520 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.c.CoreContainer Creating SolrCore 'final_authors' using configuration from instancedir /var/solr/data/final_authors, trusted=true
+2022-12-16 12:59:40.554 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.c.SolrCore Opening new SolrCore at [/var/solr/data/final_authors], dataDir=[/var/solr/data/final_authors/data/]
+2022-12-16 12:59:41.014 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2022-12-16 12:59:41.014 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2022-12-16 12:59:41.038 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2022-12-16 12:59:41.039 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2022-12-16 12:59:41.177 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/final_authors/conf
+2022-12-16 12:59:41.189 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4}
+2022-12-16 12:59:41.197 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2022-12-16 12:59:41.217 INFO  (searcherExecutor-12-thread-1-processing-final_authors) [ x:final_authors] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2022-12-16 12:59:41.218 INFO  (searcherExecutor-12-thread-1-processing-final_authors) [ x:final_authors] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2022-12-16 12:59:41.225 INFO  (searcherExecutor-12-thread-1-processing-final_authors) [ x:final_authors] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2022-12-16 13:01:33.989 INFO  (qtp1622458036-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=9
+2022-12-16 13:01:33.990 INFO  (qtp1622458036-43) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=9
+2022-12-16 13:01:34.002 INFO  (qtp1622458036-44) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=21
+2022-12-16 13:01:44.443 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&rows=0&wt=json&useParams=} hits=18 status=0 QTime=26
+2022-12-16 13:01:44.506 INFO  (qtp1622458036-23) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&fl=author,id&q.op=OR&rows=1000&useParams=} hits=18 status=0 QTime=48
+2022-12-16 13:01:44.603 INFO  (qtp1622458036-18) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&rows=0&wt=json&useParams=} hits=18 status=0 QTime=1
+2022-12-16 13:01:44.622 INFO  (qtp1622458036-19) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&fl=author,id&q.op=OR&rows=1000&useParams=} hits=18 status=0 QTime=1
+2022-12-16 13:01:51.854 INFO  (qtp1622458036-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:01:51.854 INFO  (qtp1622458036-21) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:01:51.860 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1671195693860} hits=18 status=0 QTime=1
+2022-12-16 13:01:51.870 INFO  (qtp1622458036-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=16
+2022-12-16 13:02:22.209 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=1
+2022-12-16 13:02:22.210 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:02:22.210 INFO  (qtp1622458036-19) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&wt=python&useParams=&_=1671195693860} hits=18 status=0 QTime=1
+2022-12-16 13:02:22.228 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=18
+2022-12-16 13:02:42.757 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:02:42.757 INFO  (qtp1622458036-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:02:42.771 INFO  (qtp1622458036-18) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=18 status=0 QTime=12
+2022-12-16 13:02:42.772 INFO  (qtp1622458036-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=15
+2022-12-16 13:03:13.033 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={explain=true&q=*:*&indent=true&q.op=OR&wt=python&debugQuery=false&useParams=&_=1671195693860} hits=18 status=0 QTime=1
+2022-12-16 13:03:13.033 INFO  (qtp1622458036-23) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:03:13.033 INFO  (qtp1622458036-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:03:13.049 INFO  (qtp1622458036-44) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=17
+2022-12-16 13:03:23.753 INFO  (qtp1622458036-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:03:23.754 INFO  (qtp1622458036-18) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:03:23.757 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={explain=&q=*:*&indent=true&q.op=OR&wt=python&debugQuery=false&useParams=&_=1671195693860} hits=18 status=0 QTime=2
+2022-12-16 13:03:23.769 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=16
+2022-12-16 13:03:37.092 INFO  (qtp1622458036-20) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:03:37.092 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:03:37.096 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&debug.explain.structured=true&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=18 status=0 QTime=1
+2022-12-16 13:03:37.110 INFO  (qtp1622458036-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=17
+2022-12-16 13:03:47.117 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:03:47.118 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:03:47.127 INFO  (qtp1622458036-23) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&debug.explain.structured=false&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=18 status=0 QTime=1
+2022-12-16 13:03:47.131 INFO  (qtp1622458036-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=13
+2022-12-16 13:03:57.051 INFO  (qtp1622458036-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:03:57.053 INFO  (qtp1622458036-23) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:03:57.070 INFO  (qtp1622458036-44) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=16
+2022-12-16 13:03:57.118 INFO  (qtp1622458036-18) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=social&indent=true&q.op=OR&debug.explain.structured=false&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=8 status=0 QTime=65
+2022-12-16 13:04:37.340 INFO  (qtp1622458036-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:04:37.341 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:04:37.354 INFO  (qtp1622458036-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=12
+2022-12-16 13:04:37.400 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=social&hl=true&indent=true&q.op=OR&debug.explain.structured=false&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=8 status=0 QTime=59
+2022-12-16 13:04:48.876 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:04:48.876 INFO  (qtp1622458036-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:04:48.888 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=12
+2022-12-16 13:04:48.890 INFO  (qtp1622458036-18) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=social&hl=true&indent=true&hl.usePhraseHighLighter=true&q.op=OR&debug.explain.structured=false&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=8 status=0 QTime=12
+2022-12-16 13:05:11.020 INFO  (qtp1622458036-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:05:11.021 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:05:11.033 INFO  (qtp1622458036-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=12
+2022-12-16 13:05:11.077 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=social&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=8 status=0 QTime=52
+2022-12-16 13:05:46.839 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:05:46.839 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:05:46.849 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=10
+2022-12-16 13:05:46.855 INFO  (qtp1622458036-18) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=social&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=title&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=8 status=0 QTime=14
+2022-12-16 13:06:01.073 INFO  (qtp1622458036-44) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:06:01.076 INFO  (qtp1622458036-43) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:06:01.092 INFO  (qtp1622458036-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=17
+2022-12-16 13:06:01.118 INFO  (qtp1622458036-18) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=social&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=8 status=0 QTime=39
+2022-12-16 13:06:48.062 INFO  (qtp1622458036-44) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:06:48.063 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:06:48.068 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=6
+2022-12-16 13:06:48.076 INFO  (qtp1622458036-43) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&hl.fragsize=20&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=social&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=8 status=0 QTime=12
+2022-12-16 13:07:40.766 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:07:40.769 INFO  (qtp1622458036-43) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:07:40.772 ERROR (qtp1622458036-18) [ x:final_authors] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error completing MLT request. Could not fetch document with id [] => org.apache.solr.common.SolrException: Error completing MLT request. Could not fetch document with id []
+	at org.apache.solr.search.mlt.SimpleMLTQParser.parse(SimpleMLTQParser.java:68)
+org.apache.solr.common.SolrException: Error completing MLT request. Could not fetch document with id []
+	at org.apache.solr.search.mlt.SimpleMLTQParser.parse(SimpleMLTQParser.java:68) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:188) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:171) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:391) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2865) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:250) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:218) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+2022-12-16 13:07:40.772 INFO  (qtp1622458036-18) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&hl.fragsize=20&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q={!mlt}&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} status=400 QTime=3
+2022-12-16 13:07:40.773 INFO  (qtp1622458036-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=6
+2022-12-16 13:07:52.499 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:07:52.501 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:07:52.503 ERROR (qtp1622458036-43) [ x:final_authors] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error completing MLT request. Could not fetch document with id [] => org.apache.solr.common.SolrException: Error completing MLT request. Could not fetch document with id []
+	at org.apache.solr.search.mlt.SimpleMLTQParser.parse(SimpleMLTQParser.java:68)
+org.apache.solr.common.SolrException: Error completing MLT request. Could not fetch document with id []
+	at org.apache.solr.search.mlt.SimpleMLTQParser.parse(SimpleMLTQParser.java:68) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:188) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:171) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:391) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2865) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:250) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:218) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+2022-12-16 13:07:52.504 INFO  (qtp1622458036-43) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&hl.fragsize=20&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q={!mlt+social}&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} status=400 QTime=2
+2022-12-16 13:07:52.508 INFO  (qtp1622458036-44) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=7
+2022-12-16 13:09:13.790 INFO  (qtp1622458036-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:09:13.792 INFO  (qtp1622458036-43) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:09:13.803 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=12
+2022-12-16 13:09:15.612 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:09:15.612 INFO  (qtp1622458036-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:09:15.616 INFO  (qtp1622458036-20) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&hl.fragsize=20&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=*:*&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=18 status=0 QTime=4
+2022-12-16 13:09:15.627 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=14
+2022-12-16 13:09:23.880 INFO  (qtp1622458036-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:09:23.880 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:09:23.881 ERROR (qtp1622458036-18) [ x:final_authors] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: For input string: "" => org.apache.solr.common.SolrException: For input string: ""
+	at org.apache.solr.common.params.SolrParams.getFieldInt(SolrParams.java:308)
+org.apache.solr.common.SolrException: For input string: ""
+	at org.apache.solr.common.params.SolrParams.getFieldInt(SolrParams.java:308) ~[?:?]
+	at org.apache.solr.highlight.UnifiedSolrHighlighter$SolrExtendedUnifiedHighlighter.getBreakIterator(UnifiedSolrHighlighter.java:328) ~[?:?]
+	at org.apache.lucene.search.uhighlight.UnifiedHighlighter.getFieldHighlighter(UnifiedHighlighter.java:1083) ~[?:?]
+	at org.apache.lucene.search.uhighlight.UnifiedHighlighter.highlightFieldsAsObjects(UnifiedHighlighter.java:890) ~[?:?]
+	at org.apache.lucene.search.uhighlight.UnifiedHighlighter.highlightFields(UnifiedHighlighter.java:824) ~[?:?]
+	at org.apache.solr.highlight.UnifiedSolrHighlighter.doHighlighting(UnifiedSolrHighlighter.java:165) ~[?:?]
+	at org.apache.solr.handler.component.HighlightComponent.process(HighlightComponent.java:162) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:427) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2865) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:250) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:218) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source) ~[?:?]
+	at java.lang.Integer.parseInt(Unknown Source) ~[?:?]
+	at java.lang.Integer.parseInt(Unknown Source) ~[?:?]
+	at org.apache.solr.common.params.SolrParams.getFieldInt(SolrParams.java:306) ~[?:?]
+	... 56 more
+2022-12-16 13:09:23.881 INFO  (qtp1622458036-18) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&hl.fragsize=&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=*:*&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=18 status=400 QTime=2
+2022-12-16 13:09:23.886 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=6
+2022-12-16 13:09:52.834 INFO  (qtp1622458036-44) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:09:52.835 INFO  (qtp1622458036-20) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:09:52.837 ERROR (qtp1622458036-43) [ x:final_authors] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: For input string: "" => org.apache.solr.common.SolrException: For input string: ""
+	at org.apache.solr.common.params.SolrParams.getFieldInt(SolrParams.java:308)
+org.apache.solr.common.SolrException: For input string: ""
+	at org.apache.solr.common.params.SolrParams.getFieldInt(SolrParams.java:308) ~[?:?]
+	at org.apache.solr.highlight.UnifiedSolrHighlighter$SolrExtendedUnifiedHighlighter.getBreakIterator(UnifiedSolrHighlighter.java:328) ~[?:?]
+	at org.apache.lucene.search.uhighlight.UnifiedHighlighter.getFieldHighlighter(UnifiedHighlighter.java:1083) ~[?:?]
+	at org.apache.lucene.search.uhighlight.UnifiedHighlighter.highlightFieldsAsObjects(UnifiedHighlighter.java:890) ~[?:?]
+	at org.apache.lucene.search.uhighlight.UnifiedHighlighter.highlightFields(UnifiedHighlighter.java:824) ~[?:?]
+	at org.apache.solr.highlight.UnifiedSolrHighlighter.doHighlighting(UnifiedSolrHighlighter.java:165) ~[?:?]
+	at org.apache.solr.handler.component.HighlightComponent.process(HighlightComponent.java:162) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:427) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2865) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:250) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:218) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source) ~[?:?]
+	at java.lang.Integer.parseInt(Unknown Source) ~[?:?]
+	at java.lang.Integer.parseInt(Unknown Source) ~[?:?]
+	at org.apache.solr.common.params.SolrParams.getFieldInt(SolrParams.java:306) ~[?:?]
+	... 56 more
+2022-12-16 13:09:52.838 INFO  (qtp1622458036-43) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&hl.fragsize=&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=*:*&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=18 status=400 QTime=3
+2022-12-16 13:09:52.849 INFO  (qtp1622458036-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=15
+2022-12-16 13:10:04.662 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:10:04.664 INFO  (qtp1622458036-43) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:10:04.669 INFO  (qtp1622458036-18) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&hl.fragsize=0&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=*:*&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=18 status=0 QTime=5
+2022-12-16 13:10:04.675 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=11
+2022-12-16 13:10:17.573 INFO  (qtp1622458036-44) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:10:17.579 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:10:17.581 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&hl.fragsize=10&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=*:*&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=18 status=0 QTime=2
+2022-12-16 13:10:17.587 INFO  (qtp1622458036-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=11
+2022-12-16 13:10:30.235 INFO  (qtp1622458036-20) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:10:30.235 INFO  (qtp1622458036-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:10:30.237 ERROR (qtp1622458036-18) [ x:final_authors] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: For input string: "" => org.apache.solr.common.SolrException: For input string: ""
+	at org.apache.solr.common.params.SolrParams.getFieldInt(SolrParams.java:308)
+org.apache.solr.common.SolrException: For input string: ""
+	at org.apache.solr.common.params.SolrParams.getFieldInt(SolrParams.java:308) ~[?:?]
+	at org.apache.solr.highlight.UnifiedSolrHighlighter$SolrExtendedUnifiedHighlighter.getBreakIterator(UnifiedSolrHighlighter.java:328) ~[?:?]
+	at org.apache.lucene.search.uhighlight.UnifiedHighlighter.getFieldHighlighter(UnifiedHighlighter.java:1083) ~[?:?]
+	at org.apache.lucene.search.uhighlight.UnifiedHighlighter.highlightFieldsAsObjects(UnifiedHighlighter.java:890) ~[?:?]
+	at org.apache.lucene.search.uhighlight.UnifiedHighlighter.highlightFields(UnifiedHighlighter.java:824) ~[?:?]
+	at org.apache.solr.highlight.UnifiedSolrHighlighter.doHighlighting(UnifiedSolrHighlighter.java:165) ~[?:?]
+	at org.apache.solr.handler.component.HighlightComponent.process(HighlightComponent.java:162) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:427) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2865) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:250) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:218) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source) ~[?:?]
+	at java.lang.Integer.parseInt(Unknown Source) ~[?:?]
+	at java.lang.Integer.parseInt(Unknown Source) ~[?:?]
+	at org.apache.solr.common.params.SolrParams.getFieldInt(SolrParams.java:306) ~[?:?]
+	... 56 more
+2022-12-16 13:10:30.237 INFO  (qtp1622458036-18) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&hl.fragsize=&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=*:*&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=18 status=400 QTime=1
+2022-12-16 13:10:30.248 INFO  (qtp1622458036-44) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=13
+2022-12-16 13:10:41.499 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:10:41.499 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:10:41.509 ERROR (qtp1622458036-26) [ x:final_authors] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: For input string: "" => org.apache.solr.common.SolrException: For input string: ""
+	at org.apache.solr.common.params.SolrParams.getFieldInt(SolrParams.java:308)
+org.apache.solr.common.SolrException: For input string: ""
+	at org.apache.solr.common.params.SolrParams.getFieldInt(SolrParams.java:308) ~[?:?]
+	at org.apache.solr.highlight.UnifiedSolrHighlighter$SolrExtendedUnifiedHighlighter.getBreakIterator(UnifiedSolrHighlighter.java:328) ~[?:?]
+	at org.apache.lucene.search.uhighlight.UnifiedHighlighter.getFieldHighlighter(UnifiedHighlighter.java:1083) ~[?:?]
+	at org.apache.lucene.search.uhighlight.UnifiedHighlighter.highlightFieldsAsObjects(UnifiedHighlighter.java:890) ~[?:?]
+	at org.apache.lucene.search.uhighlight.UnifiedHighlighter.highlightFields(UnifiedHighlighter.java:824) ~[?:?]
+	at org.apache.solr.highlight.UnifiedSolrHighlighter.doHighlighting(UnifiedSolrHighlighter.java:165) ~[?:?]
+	at org.apache.solr.handler.component.HighlightComponent.process(HighlightComponent.java:162) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:427) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2865) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:250) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:218) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+Caused by: java.lang.NumberFormatException: For input string: ""
+	at java.lang.NumberFormatException.forInputString(Unknown Source) ~[?:?]
+	at java.lang.Integer.parseInt(Unknown Source) ~[?:?]
+	at java.lang.Integer.parseInt(Unknown Source) ~[?:?]
+	at org.apache.solr.common.params.SolrParams.getFieldInt(SolrParams.java:306) ~[?:?]
+	... 56 more
+2022-12-16 13:10:41.509 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&hl.fragsize=&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=improv&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=10 status=400 QTime=4
+2022-12-16 13:10:41.510 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=11
+2022-12-16 13:10:46.426 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:10:46.427 INFO  (qtp1622458036-20) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:10:46.440 INFO  (qtp1622458036-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=12
+2022-12-16 13:10:46.464 INFO  (qtp1622458036-23) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=improv&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=10 status=0 QTime=35
+2022-12-16 13:10:53.937 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:10:53.938 INFO  (qtp1622458036-23) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:10:53.952 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&hl.fragsize=10&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=improv&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=10 status=0 QTime=13
+2022-12-16 13:10:53.954 INFO  (qtp1622458036-44) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=16
+2022-12-16 13:11:06.592 INFO  (qtp1622458036-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:11:06.592 INFO  (qtp1622458036-18) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:11:06.604 INFO  (qtp1622458036-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=12
+2022-12-16 13:11:06.605 INFO  (qtp1622458036-23) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&hl.fragsize=100&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=improv&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=&_=1671195693860} hits=10 status=0 QTime=12
+2022-12-16 13:11:22.589 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={hl=true&indent=true&hl.fragsize=100&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=improv&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=true&useParams=} hits=10 status=0 QTime=13
+2022-12-16 13:18:24.209 INFO  (qtp1622458036-18) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671195693808} status=0 QTime=0
+2022-12-16 13:18:24.211 INFO  (qtp1622458036-42) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671195693860} status=0 QTime=0
+2022-12-16 13:18:24.215 INFO  (qtp1622458036-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671195693808} status=0 QTime=6
+2022-12-16 13:18:24.238 INFO  (qtp1622458036-27) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={debug=results&hl=true&indent=true&q.op=OR&debug.explain.structured=false&hl.simple.pre=<b>&q=improv&hl.simple.post=</b>&hl.usePhraseHighLighter=true&hl.fl=*&wt=python&debugQuery=false&useParams=&_=1671195693860} hits=10 status=0 QTime=25
+2022-12-16 14:06:49.924 INFO  (JettyShutdownThread) [] o.e.j.s.AbstractConnector Stopped ServerConnector@7fe7c640{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-12-16 14:06:49.935 INFO  (JettyShutdownThread) [] o.a.s.c.CoreContainer Shutting down CoreContainer instance=638204510
+2022-12-16 14:06:49.939 INFO  (coreCloseExecutor-18-thread-1) [ x:final_authors] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@7c1815f7 final_authors
+2022-12-16 14:06:49.939 INFO  (coreCloseExecutor-18-thread-1) [ x:final_authors] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.final_authors tag=SolrCore@7c1815f7
+2022-12-16 14:06:49.965 INFO  (coreCloseExecutor-18-thread-1) [ x:final_authors] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2022-12-16 14:06:49.976 INFO  (JettyShutdownThread) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2022-12-16 14:06:50.002 INFO  (JettyShutdownThread) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2022-12-16 14:06:50.012 INFO  (JettyShutdownThread) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2022-12-16 14:06:50.023 INFO  (JettyShutdownThread) [] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@76a36b71{/solr,null,STOPPED}{/opt/solr-9.1.0/server/solr-webapp/webapp}

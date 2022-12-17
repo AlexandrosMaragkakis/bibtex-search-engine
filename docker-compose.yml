@@ -16,11 +16,8 @@ services:
     ports:
       - 8983:8983
     volumes:
-      - solrdata:/var/solr/
+      - ./solrData:/var/solr/
     command:
       - solr-precreate
       - final_authors
     
-    
-volumes:
-  solrdata:

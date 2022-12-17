@@ -1,0 +1,314 @@
+2022-12-15 21:48:57.354 INFO  (main) [] o.e.j.u.log Logging initialized @784ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-12-15 21:48:57.545 INFO  (main) [] o.e.j.s.Server jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 17.0.5+8
+2022-12-15 21:48:57.798 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2022-12-15 21:48:57.807 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.1.0
+2022-12-15 21:48:57.808 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2022-12-15 21:48:57.808 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /opt/solr
+2022-12-15 21:48:57.808 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2022-12-15T21:48:57.808526355Z
+2022-12-15 21:48:57.812 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr Home: /var/solr/data (source: system property: solr.solr.home)
+2022-12-15 21:48:57.814 INFO  (main) [] o.a.s.c.SolrXmlConfig solr.xml not found in SOLR_HOME, using built-in default
+2022-12-15 21:48:57.814 INFO  (main) [] o.a.s.c.SolrXmlConfig Loading solr.xml from /opt/solr/server/solr/solr.xml
+2022-12-15 21:48:57.875 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/opt/solr/lib]
+2022-12-15 21:48:58.883 WARN  (main) [] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2022-12-15 21:48:58.885 WARN  (main) [] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2022-12-15 21:48:59.048 INFO  (main) [] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /var/solr/data
+2022-12-15 21:48:59.049 INFO  (main) [] o.a.s.c.CorePropertiesLocator Cores are: [final_authors]
+2022-12-15 21:48:59.053 INFO  (coreLoadExecutor-10-thread-1) [] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient core cache for max 2147483647 cores with initial capacity of 1024
+2022-12-15 21:48:59.106 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.3.0
+2022-12-15 21:48:59.121 INFO  (main) [] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@76a36b71{/solr,file:///opt/solr-9.1.0/server/solr-webapp/webapp/,AVAILABLE}{/opt/solr-9.1.0/server/solr-webapp/webapp}
+2022-12-15 21:48:59.128 INFO  (main) [] o.e.j.s.RequestLogWriter Opened /var/solr/logs/2022_12_15.request.log
+2022-12-15 21:48:59.135 INFO  (main) [] o.e.j.s.AbstractConnector Started ServerConnector@7fe7c640{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-12-15 21:48:59.135 INFO  (main) [] o.e.j.s.Server Started @2567ms
+2022-12-15 21:48:59.177 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.s.IndexSchema Schema name=default-config
+2022-12-15 21:48:59.380 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2022-12-15 21:48:59.381 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.c.CoreContainer Creating SolrCore 'final_authors' using configuration from instancedir /var/solr/data/final_authors, trusted=true
+2022-12-15 21:48:59.413 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.c.SolrCore Opening new SolrCore at [/var/solr/data/final_authors], dataDir=[/var/solr/data/final_authors/data/]
+2022-12-15 21:48:59.830 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2022-12-15 21:48:59.830 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2022-12-15 21:48:59.850 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2022-12-15 21:48:59.850 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2022-12-15 21:48:59.981 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/final_authors/conf
+2022-12-15 21:48:59.994 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.s.DirectSolrSpellChecker init: {name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal, accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4}
+2022-12-15 21:49:00.002 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2022-12-15 21:49:00.015 INFO  (searcherExecutor-12-thread-1-processing-final_authors) [ x:final_authors] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2022-12-15 21:49:00.015 INFO  (searcherExecutor-12-thread-1-processing-final_authors) [ x:final_authors] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2022-12-15 21:49:00.023 INFO  (searcherExecutor-12-thread-1-processing-final_authors) [ x:final_authors] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2022-12-15 21:49:05.482 INFO  (qtp1622458036-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=8
+2022-12-15 21:49:05.483 INFO  (qtp1622458036-21) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1671140945467} status=0 QTime=4
+2022-12-15 21:49:05.486 INFO  (qtp1622458036-18) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/admin/ping params={action=status&wt=json&_=1671140945430&ts=1671140945430} status=503 QTime=1
+2022-12-15 21:49:05.487 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/replication params={wt=json&command=details&_=1671140945467} status=0 QTime=6
+2022-12-15 21:49:05.495 INFO  (qtp1622458036-23) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/admin/system params={wt=json&_=1671140945467} status=0 QTime=12
+2022-12-15 21:49:05.501 INFO  (qtp1622458036-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=22
+2022-12-15 21:55:10.365 INFO  (qtp1622458036-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=1
+2022-12-15 21:55:10.372 INFO  (qtp1622458036-27) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=6
+2022-12-15 21:55:10.385 INFO  (qtp1622458036-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=21
+2022-12-15 21:55:19.536 INFO  (qtp1622458036-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 21:55:19.537 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 21:55:19.552 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=17
+2022-12-15 21:55:19.579 ERROR (qtp1622458036-42) [ x:final_authors] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Error completing MLT request. Could not fetch document with id [1] => org.apache.solr.common.SolrException: Error completing MLT request. Could not fetch document with id [1]
+	at org.apache.solr.search.mlt.SimpleMLTQParser.parse(SimpleMLTQParser.java:68)
+org.apache.solr.common.SolrException: Error completing MLT request. Could not fetch document with id [1]
+	at org.apache.solr.search.mlt.SimpleMLTQParser.parse(SimpleMLTQParser.java:68) ~[?:?]
+	at org.apache.solr.search.QParser.getQuery(QParser.java:188) ~[?:?]
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:171) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:384) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2865) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:250) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:218) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+2022-12-15 21:55:19.579 INFO  (qtp1622458036-42) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q={!mlt+qf%3Dtitle}1&indent=true&q.op=OR&useParams=&_=1671141310323} status=400 QTime=39
+2022-12-15 21:55:33.065 INFO  (qtp1622458036-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 21:55:33.067 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 21:55:33.084 INFO  (qtp1622458036-27) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=17
+2022-12-15 21:55:33.470 INFO  (qtp1622458036-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 21:55:33.470 INFO  (qtp1622458036-42) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 21:55:33.485 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=15
+2022-12-15 21:55:33.515 INFO  (qtp1622458036-25) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1671141310323} hits=18 status=0 QTime=42
+2022-12-15 21:55:48.603 INFO  (qtp1622458036-20) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 21:55:48.605 INFO  (qtp1622458036-27) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 21:55:48.624 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=21
+2022-12-15 21:55:48.661 INFO  (qtp1622458036-19) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q={!mlt+qf%3Dtitle}e6de5d4d-551c-439b-b490-4990e8cfffaf&indent=true&q.op=OR&useParams=&_=1671141310323} hits=17 status=0 QTime=58
+2022-12-15 22:03:23.294 INFO  (qtp1622458036-27) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:03:23.296 INFO  (qtp1622458036-23) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:03:23.317 INFO  (qtp1622458036-44) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=22
+2022-12-15 22:03:23.970 INFO  (qtp1622458036-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:03:23.973 INFO  (qtp1622458036-43) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:03:23.978 INFO  (qtp1622458036-25) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=*:*&indent=true&q.op=OR&useParams=&_=1671141310323} hits=18 status=0 QTime=1
+2022-12-15 22:03:23.986 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=13
+2022-12-15 22:03:35.923 INFO  (qtp1622458036-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:03:35.925 INFO  (qtp1622458036-47) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:03:35.939 INFO  (qtp1622458036-25) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=improv&indent=true&q.op=OR&useParams=&_=1671141310323} hits=10 status=0 QTime=8
+2022-12-15 22:03:35.939 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=15
+2022-12-15 22:03:47.098 INFO  (qtp1622458036-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:03:47.098 INFO  (qtp1622458036-19) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:03:47.115 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=16
+2022-12-15 22:03:47.119 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=improv+AND+expert&indent=true&q.op=OR&useParams=&_=1671141310323} hits=3 status=0 QTime=20
+2022-12-15 22:03:57.614 INFO  (qtp1622458036-43) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:03:57.614 INFO  (qtp1622458036-27) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:03:57.617 INFO  (qtp1622458036-25) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=improv+AND+expert+AND+game&indent=true&q.op=OR&useParams=&_=1671141310323} hits=2 status=0 QTime=3
+2022-12-15 22:03:57.631 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=16
+2022-12-15 22:04:13.720 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:04:13.720 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:04:13.725 INFO  (qtp1622458036-19) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=improv+AND+expert+AND+NOT+game&indent=true&q.op=OR&useParams=&_=1671141310323} hits=1 status=0 QTime=4
+2022-12-15 22:04:13.728 INFO  (qtp1622458036-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=8
+2022-12-15 22:04:19.539 INFO  (qtp1622458036-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:04:19.539 INFO  (qtp1622458036-27) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:04:19.543 INFO  (qtp1622458036-23) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=improv+AND+expert+NOT+game&indent=true&q.op=OR&useParams=&_=1671141310323} hits=1 status=0 QTime=2
+2022-12-15 22:04:19.546 INFO  (qtp1622458036-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=8
+2022-12-15 22:04:20.063 INFO  (qtp1622458036-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:04:20.064 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:04:20.066 INFO  (qtp1622458036-47) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=improv+AND+expert+NOT+game&indent=true&q.op=OR&useParams=&_=1671141310323} hits=1 status=0 QTime=2
+2022-12-15 22:04:20.076 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=13
+2022-12-15 22:04:20.638 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:04:20.640 INFO  (qtp1622458036-27) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:04:20.641 INFO  (qtp1622458036-43) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=improv+AND+expert+NOT+game&indent=true&q.op=OR&useParams=&_=1671141310323} hits=1 status=0 QTime=2
+2022-12-15 22:04:20.653 INFO  (qtp1622458036-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=14
+2022-12-15 22:04:30.824 INFO  (qtp1622458036-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:04:30.825 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:04:30.830 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=improv+AND+expert+OR+game&indent=true&q.op=OR&useParams=&_=1671141310323} hits=3 status=0 QTime=6
+2022-12-15 22:04:30.840 INFO  (qtp1622458036-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=16
+2022-12-15 22:04:44.946 INFO  (qtp1622458036-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:04:44.946 INFO  (qtp1622458036-27) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:04:44.954 INFO  (qtp1622458036-25) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=improv+AND+expert+OR+game+AND+NOT+gender&indent=true&q.op=OR&useParams=&_=1671141310323} hits=1 status=0 QTime=6
+2022-12-15 22:04:44.958 INFO  (qtp1622458036-23) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=12
+2022-12-15 22:23:08.020 INFO  (qtp1622458036-43) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:23:08.023 INFO  (qtp1622458036-19) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:23:08.026 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q={!mlt+qf%3Dname}27a6aea1-6b6d-4cee-9a2b-438ec04be05a&indent=true&q.op=OR&useParams=&_=1671141310323} hits=0 status=0 QTime=2
+2022-12-15 22:23:08.033 INFO  (qtp1622458036-42) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=12
+2022-12-15 22:23:15.216 INFO  (qtp1622458036-23) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:23:15.216 INFO  (qtp1622458036-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:23:15.222 INFO  (qtp1622458036-44) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=6
+2022-12-15 22:23:15.247 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q={!mlt+qf%3Dtitle}27a6aea1-6b6d-4cee-9a2b-438ec04be05a&indent=true&q.op=OR&useParams=&_=1671141310323} hits=16 status=0 QTime=29
+2022-12-15 22:27:16.034 INFO  (qtp1622458036-25) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:27:16.035 INFO  (qtp1622458036-43) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:27:16.046 INFO  (qtp1622458036-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=11
+2022-12-15 22:27:16.056 ERROR (qtp1622458036-42) [ x:final_authors] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: Missing required parameter: mlt.fl => org.apache.solr.common.SolrException: Missing required parameter: mlt.fl
+	at org.apache.solr.common.params.RequiredSolrParams.getParams(RequiredSolrParams.java:86)
+org.apache.solr.common.SolrException: Missing required parameter: mlt.fl
+	at org.apache.solr.common.params.RequiredSolrParams.getParams(RequiredSolrParams.java:86) ~[?:?]
+	at org.apache.solr.handler.MoreLikeThisHandler$MoreLikeThisHelper.<init>(MoreLikeThisHandler.java:298) ~[?:?]
+	at org.apache.solr.handler.component.MoreLikeThisComponent.getMoreLikeThese(MoreLikeThisComponent.java:365) ~[?:?]
+	at org.apache.solr.handler.component.MoreLikeThisComponent.process(MoreLikeThisComponent.java:125) ~[?:?]
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:420) ~[?:?]
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:224) ~[?:?]
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2865) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:887) ~[?:?]
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:606) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.dispatch(SolrDispatchFilter.java:250) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.lambda$doFilter$0(SolrDispatchFilter.java:218) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.traceHttpRequestExecution2(ServletUtils.java:257) ~[?:?]
+	at org.apache.solr.servlet.ServletUtils.rateLimitRequest(ServletUtils.java:227) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:213) ~[?:?]
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195) ~[?:?]
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:201) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600) ~[jetty-security-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505) ~[jetty-servlet-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:191) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322) ~[jetty-rewrite-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.Server.handle(Server.java:516) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277) ~[jetty-server-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104) ~[jetty-io-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034) ~[jetty-util-9.4.48.v20220622.jar:9.4.48.v20220622]
+	at java.lang.Thread.run(Unknown Source) ~[?:?]
+2022-12-15 22:27:16.057 INFO  (qtp1622458036-42) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q={!mlt+qf%3Dtitle}27a6aea1-6b6d-4cee-9a2b-438ec04be05a&mlt=true&indent=true&q.op=OR&useParams=&_=1671141310323} hits=16 status=400 QTime=19
+2022-12-15 22:27:34.192 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:27:34.192 INFO  (qtp1622458036-51) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:27:34.199 INFO  (qtp1622458036-26) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=7
+2022-12-15 22:27:34.251 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q={!mlt+qf%3Dtitle}27a6aea1-6b6d-4cee-9a2b-438ec04be05a&mlt=true&indent=true&mlt.fl=title&q.op=OR&useParams=&_=1671141310323} hits=16 status=0 QTime=60
+2022-12-15 22:28:28.012 INFO  (qtp1622458036-42) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:28:28.012 INFO  (qtp1622458036-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:28:28.018 INFO  (qtp1622458036-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=6
+2022-12-15 22:28:28.042 INFO  (qtp1622458036-43) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=title%3Dsocial&mlt=true&indent=true&mlt.fl=title&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=28
+2022-12-15 22:32:08.298 INFO  (qtp1622458036-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:32:08.302 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:32:08.303 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=title%3Dsocial&indent=true&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=1
+2022-12-15 22:32:08.307 INFO  (qtp1622458036-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=7
+2022-12-15 22:40:54.366 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:40:54.368 INFO  (qtp1622458036-54) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:40:54.370 INFO  (qtp1622458036-53) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=title%3Dsocial&indent=true&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=1
+2022-12-15 22:40:54.377 INFO  (qtp1622458036-51) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=10
+2022-12-15 22:42:32.954 INFO  (qtp1622458036-56) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:42:32.955 INFO  (qtp1622458036-26) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:42:32.956 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={explain=true&q=title%3Dsocial&indent=true&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=1
+2022-12-15 22:42:32.969 INFO  (qtp1622458036-52) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=14
+2022-12-15 22:44:34.239 INFO  (qtp1622458036-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:44:34.242 INFO  (qtp1622458036-49) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:44:34.245 INFO  (qtp1622458036-51) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=title%3Dsocial&[explain]=&indent=true&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=2
+2022-12-15 22:44:34.246 INFO  (qtp1622458036-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=6
+2022-12-15 22:44:46.771 INFO  (qtp1622458036-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:44:46.773 INFO  (qtp1622458036-52) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:44:46.774 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=title%3Dsocial&[explain]=true&indent=true&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=1
+2022-12-15 22:44:46.787 INFO  (qtp1622458036-54) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=14
+2022-12-15 22:44:55.059 INFO  (qtp1622458036-49) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:44:55.059 INFO  (qtp1622458036-61) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:44:55.062 INFO  (qtp1622458036-51) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=social&[explain]=true&indent=true&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=2
+2022-12-15 22:44:55.072 INFO  (qtp1622458036-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=13
+2022-12-15 22:45:06.672 INFO  (qtp1622458036-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:45:06.674 INFO  (qtp1622458036-22) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:45:06.680 INFO  (qtp1622458036-52) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={explain=true&q=social&indent=true&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=1
+2022-12-15 22:45:06.685 INFO  (qtp1622458036-54) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=11
+2022-12-15 22:45:16.246 INFO  (qtp1622458036-22) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:45:16.246 INFO  (qtp1622458036-61) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:45:16.247 INFO  (qtp1622458036-51) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=social&indent=true&[explain+style=nl]&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=1
+2022-12-15 22:45:16.252 INFO  (qtp1622458036-47) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=7
+2022-12-15 22:48:18.729 INFO  (qtp1622458036-44) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={explain=true&q=social&indent=true&q.op=OR&useParams=} hits=8 status=0 QTime=1
+2022-12-15 22:49:32.150 INFO  (qtp1622458036-53) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=1
+2022-12-15 22:49:32.152 INFO  (qtp1622458036-54) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:49:32.156 INFO  (qtp1622458036-19) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=6
+2022-12-15 22:49:32.161 INFO  (qtp1622458036-52) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={explain=true&q=social&indent=true&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=1
+2022-12-15 22:49:39.893 INFO  (qtp1622458036-53) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={explain=true&q=social&indent=true&q.op=OR&useParams=} hits=8 status=0 QTime=1
+2022-12-15 22:51:52.018 INFO  (qtp1622458036-49) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={explain=true&q=social} hits=8 status=0 QTime=1
+2022-12-15 22:53:32.871 INFO  (qtp1622458036-53) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:53:32.875 INFO  (qtp1622458036-56) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:53:32.882 INFO  (qtp1622458036-62) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=social&indent=true&[explain+style=nl]&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=1
+2022-12-15 22:53:32.888 INFO  (qtp1622458036-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=14
+2022-12-15 22:53:50.764 INFO  (qtp1622458036-56) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=social&indent=true&[explain+style=nl]&q.op=OR&useParams=} hits=8 status=0 QTime=1
+2022-12-15 22:54:51.002 INFO  (qtp1622458036-62) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:54:51.003 INFO  (qtp1622458036-53) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:54:51.005 INFO  (qtp1622458036-49) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=social&indent=true&%255Bexplain+style=nl]&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=1
+2022-12-15 22:54:51.015 INFO  (qtp1622458036-54) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=12
+2022-12-15 22:55:04.477 INFO  (qtp1622458036-65) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:55:04.479 INFO  (qtp1622458036-61) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:55:04.482 INFO  (qtp1622458036-49) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=social&indent=true&[explain+style=nl]&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=0
+2022-12-15 22:55:04.491 INFO  (qtp1622458036-64) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=12
+2022-12-15 22:55:04.904 INFO  (qtp1622458036-54) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:55:04.907 INFO  (qtp1622458036-53) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:55:04.910 INFO  (qtp1622458036-60) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={explain=true&q=social&indent=true&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=0
+2022-12-15 22:55:04.917 INFO  (qtp1622458036-65) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=12
+2022-12-15 22:55:05.357 INFO  (qtp1622458036-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:55:05.358 INFO  (qtp1622458036-61) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:55:05.360 INFO  (qtp1622458036-64) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=social&indent=true&[explain+style=nl]&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=1
+2022-12-15 22:55:05.370 INFO  (qtp1622458036-54) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=13
+2022-12-15 22:55:05.821 INFO  (qtp1622458036-62) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:55:05.823 INFO  (qtp1622458036-53) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:55:05.824 INFO  (qtp1622458036-65) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={explain=true&q=social&indent=true&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=1
+2022-12-15 22:55:05.829 INFO  (qtp1622458036-60) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=7
+2022-12-15 22:55:07.773 INFO  (qtp1622458036-61) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/config/params params={wt=json&_=1671141310324} status=0 QTime=0
+2022-12-15 22:55:07.773 INFO  (qtp1622458036-49) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1671140945430} status=0 QTime=0
+2022-12-15 22:55:07.775 INFO  (qtp1622458036-64) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=social&indent=true&[explain+style=nl]&q.op=OR&useParams=&_=1671141310323} hits=8 status=0 QTime=1
+2022-12-15 22:55:07.787 INFO  (qtp1622458036-54) [] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1671140945430} status=0 QTime=15
+2022-12-15 22:55:10.078 INFO  (qtp1622458036-62) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=social&indent=true&[explain+style=nl]&q.op=OR&useParams=} hits=8 status=0 QTime=1
+2022-12-15 22:55:15.021 INFO  (qtp1622458036-64) [ x:final_authors] o.a.s.c.S.Request webapp=/solr path=/select params={q=social&indent=true&[explain+style=nl]&q.op=OR&useParams=} hits=8 status=0 QTime=1
+2022-12-15 23:00:01.837 INFO  (JettyShutdownThread) [] o.e.j.s.AbstractConnector Stopped ServerConnector@7fe7c640{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-12-15 23:00:01.855 INFO  (JettyShutdownThread) [] o.a.s.c.CoreContainer Shutting down CoreContainer instance=638204510
+2022-12-15 23:00:01.860 INFO  (coreCloseExecutor-18-thread-1) [ x:final_authors] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@6141544d final_authors
+2022-12-15 23:00:01.861 INFO  (coreCloseExecutor-18-thread-1) [ x:final_authors] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.final_authors tag=SolrCore@6141544d
+2022-12-15 23:00:01.907 INFO  (coreCloseExecutor-18-thread-1) [ x:final_authors] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2022-12-15 23:00:01.922 INFO  (JettyShutdownThread) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2022-12-15 23:00:01.943 INFO  (JettyShutdownThread) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2022-12-15 23:00:01.960 INFO  (JettyShutdownThread) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2022-12-15 23:00:01.974 INFO  (JettyShutdownThread) [] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@76a36b71{/solr,null,STOPPED}{/opt/solr-9.1.0/server/solr-webapp/webapp}

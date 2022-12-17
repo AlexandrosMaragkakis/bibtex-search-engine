@@ -1,0 +1,137 @@
+2022-12-15 23:05:51.534 INFO  (main) [] o.e.j.u.log Logging initialized @755ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-12-15 23:05:51.727 INFO  (main) [] o.e.j.s.Server jetty-9.4.44.v20210927; built: 2021-09-27T23:02:44.612Z; git: 8da83308eeca865e495e53ef315a249d63ba9332; jvm 17.0.5+8
+2022-12-15 23:05:51.983 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2022-12-15 23:05:51.993 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.0.0
+2022-12-15 23:05:51.993 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2022-12-15 23:05:51.993 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /opt/solr
+2022-12-15 23:05:51.993 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2022-12-15T23:05:51.993536898Z
+2022-12-15 23:05:51.997 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr Home: /var/solr/data (source: system property: solr.solr.home)
+2022-12-15 23:05:51.999 INFO  (main) [] o.a.s.c.SolrXmlConfig Loading solr.xml from /var/solr/data/solr.xml
+2022-12-15 23:05:52.445 WARN  (main) [] o.a.s.h.c.HttpShardHandlerFactory Property 'shardsWhitelist' is deprecated, please use 'allowUrls' instead.
+2022-12-15 23:05:52.684 WARN  (main) [] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2022-12-15 23:05:52.692 WARN  (main) [] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2022-12-15 23:05:52.850 INFO  (main) [] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /var/solr/data
+2022-12-15 23:05:52.851 INFO  (main) [] o.a.s.c.CorePropertiesLocator Cores are: [final_authors]
+2022-12-15 23:05:52.858 INFO  (coreLoadExecutor-10-thread-1) [] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient core cache for max 2147483647 cores with initial capacity of 1024
+2022-12-15 23:05:52.916 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.3.0
+2022-12-15 23:05:52.922 INFO  (main) [] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@77192705{/solr,file:///opt/solr-9.0.0/server/solr-webapp/webapp/,AVAILABLE}{/opt/solr-9.0.0/server/solr-webapp/webapp}
+2022-12-15 23:05:52.928 INFO  (main) [] o.e.j.s.RequestLogWriter Opened /var/solr/logs/2022_12_15.request.log
+2022-12-15 23:05:52.943 INFO  (main) [] o.e.j.s.AbstractConnector Started ServerConnector@2371aaca{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-12-15 23:05:52.943 INFO  (main) [] o.e.j.s.Server Started @2165ms
+2022-12-15 23:05:52.999 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.s.IndexSchema Schema name=default-config
+2022-12-15 23:05:53.288 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2022-12-15 23:05:53.288 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.c.CoreContainer Creating SolrCore 'final_authors' using configuration from instancedir /var/solr/data/final_authors, trusted=true
+2022-12-15 23:05:53.320 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.c.SolrCore Opening new SolrCore at [/var/solr/data/final_authors], dataDir=[/var/solr/data/final_authors/data/]
+2022-12-15 23:05:53.768 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2022-12-15 23:05:53.768 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2022-12-15 23:05:53.788 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2022-12-15 23:05:53.789 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2022-12-15 23:05:53.846 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@78590103 final_authors
+2022-12-15 23:05:53.846 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.final_authors tag=SolrCore@78590103
+2022-12-15 23:05:53.873 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2022-12-15 23:05:53.875 ERROR (coreContainerWorkExecutor-2-thread-1) [] o.a.s.c.CoreContainer Error waiting for SolrCore to be loaded on startup => java.util.concurrent.ExecutionException: org.apache.solr.common.SolrException: Unable to create core [final_authors]
+	at java.base/java.util.concurrent.FutureTask.report(Unknown Source)
+java.util.concurrent.ExecutionException: org.apache.solr.common.SolrException: Unable to create core [final_authors]
+	at java.util.concurrent.FutureTask.report(Unknown Source) ~[?:?]
+	at java.util.concurrent.FutureTask.get(Unknown Source) ~[?:?]
+	at org.apache.solr.core.CoreContainer.lambda$load$11(CoreContainer.java:979) ~[?:?]
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedRunnable.run(InstrumentedExecutorService.java:180) ~[metrics-core-4.1.5.jar:4.1.5]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) ~[?:?]
+	at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:?]
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:259) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?]
+	at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: org.apache.solr.common.SolrException: Unable to create core [final_authors]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1583) ~[?:?]
+	at org.apache.solr.core.CoreContainer.lambda$load$10(CoreContainer.java:950) ~[?:?]
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:202) ~[metrics-core-4.1.5.jar:4.1.5]
+	... 5 more
+Caused by: org.apache.solr.common.SolrException: Error opening new searcher
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1204) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1048) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1560) ~[?:?]
+	at org.apache.solr.core.CoreContainer.lambda$load$10(CoreContainer.java:950) ~[?:?]
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:202) ~[metrics-core-4.1.5.jar:4.1.5]
+	... 5 more
+Caused by: org.apache.solr.common.SolrException: Error opening new searcher
+	at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2426) ~[?:?]
+	at org.apache.solr.core.SolrCore.getSearcher(SolrCore.java:2559) ~[?:?]
+	at org.apache.solr.core.SolrCore.initSearcher(SolrCore.java:1263) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1148) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1048) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1560) ~[?:?]
+	at org.apache.solr.core.CoreContainer.lambda$load$10(CoreContainer.java:950) ~[?:?]
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:202) ~[metrics-core-4.1.5.jar:4.1.5]
+	... 5 more
+Caused by: java.lang.IllegalArgumentException: Could not load codec 'Lucene92'. Did you forget to add lucene-backward-codecs.jar?
+	at org.apache.lucene.index.SegmentInfos.readCodec(SegmentInfos.java:515) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.parseSegmentInfos(SegmentInfos.java:404) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:363) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:299) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:288) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1079) ~[?:?]
+	at org.apache.solr.update.SolrIndexWriter.<init>(SolrIndexWriter.java:145) ~[?:?]
+	at org.apache.solr.update.SolrIndexWriter.create(SolrIndexWriter.java:110) ~[?:?]
+	at org.apache.solr.update.DefaultSolrCoreState.createMainIndexWriter(DefaultSolrCoreState.java:258) ~[?:?]
+	at org.apache.solr.update.DefaultSolrCoreState.getIndexWriter(DefaultSolrCoreState.java:125) ~[?:?]
+	at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2378) ~[?:?]
+	at org.apache.solr.core.SolrCore.getSearcher(SolrCore.java:2559) ~[?:?]
+	at org.apache.solr.core.SolrCore.initSearcher(SolrCore.java:1263) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1148) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1048) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1560) ~[?:?]
+	at org.apache.solr.core.CoreContainer.lambda$load$10(CoreContainer.java:950) ~[?:?]
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:202) ~[metrics-core-4.1.5.jar:4.1.5]
+	... 5 more
+	Suppressed: org.apache.lucene.index.CorruptIndexException: checksum passed (123723d4). possibly transient resource issue, or a Lucene or JVM bug (resource=BufferedChecksumIndexInput(MMapIndexInput(path="/var/solr/data/final_authors/data/index/segments_p")))
+		at org.apache.lucene.codecs.CodecUtil.checkFooter(CodecUtil.java:500) ~[?:?]
+		at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:370) ~[?:?]
+		at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:299) ~[?:?]
+		at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:288) ~[?:?]
+		at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1079) ~[?:?]
+		at org.apache.solr.update.SolrIndexWriter.<init>(SolrIndexWriter.java:145) ~[?:?]
+		at org.apache.solr.update.SolrIndexWriter.create(SolrIndexWriter.java:110) ~[?:?]
+		at org.apache.solr.update.DefaultSolrCoreState.createMainIndexWriter(DefaultSolrCoreState.java:258) ~[?:?]
+		at org.apache.solr.update.DefaultSolrCoreState.getIndexWriter(DefaultSolrCoreState.java:125) ~[?:?]
+		at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2378) ~[?:?]
+		at org.apache.solr.core.SolrCore.getSearcher(SolrCore.java:2559) ~[?:?]
+		at org.apache.solr.core.SolrCore.initSearcher(SolrCore.java:1263) ~[?:?]
+		at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1148) ~[?:?]
+		at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1048) ~[?:?]
+		at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1560) ~[?:?]
+		at org.apache.solr.core.CoreContainer.lambda$load$10(CoreContainer.java:950) ~[?:?]
+		at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:202) ~[metrics-core-4.1.5.jar:4.1.5]
+		at java.util.concurrent.FutureTask.run(Unknown Source) ~[?:?]
+		at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:259) ~[?:?]
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[?:?]
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[?:?]
+		at java.lang.Thread.run(Unknown Source) [?:?]
+Caused by: java.lang.IllegalArgumentException: An SPI class of type org.apache.lucene.codecs.Codec with name 'Lucene92' does not exist.  You need to add the corresponding JAR file supporting this SPI to your classpath.  The current classpath supports the following names: [Lucene80, Lucene84, Lucene86, Lucene87, Lucene70, SimpleText, Lucene90]
+	at org.apache.lucene.util.NamedSPILoader.lookup(NamedSPILoader.java:113) ~[?:?]
+	at org.apache.lucene.codecs.Codec.forName(Codec.java:118) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCodec(SegmentInfos.java:511) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.parseSegmentInfos(SegmentInfos.java:404) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:363) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:299) ~[?:?]
+	at org.apache.lucene.index.SegmentInfos.readCommit(SegmentInfos.java:288) ~[?:?]
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1079) ~[?:?]
+	at org.apache.solr.update.SolrIndexWriter.<init>(SolrIndexWriter.java:145) ~[?:?]
+	at org.apache.solr.update.SolrIndexWriter.create(SolrIndexWriter.java:110) ~[?:?]
+	at org.apache.solr.update.DefaultSolrCoreState.createMainIndexWriter(DefaultSolrCoreState.java:258) ~[?:?]
+	at org.apache.solr.update.DefaultSolrCoreState.getIndexWriter(DefaultSolrCoreState.java:125) ~[?:?]
+	at org.apache.solr.core.SolrCore.openNewSearcher(SolrCore.java:2378) ~[?:?]
+	at org.apache.solr.core.SolrCore.getSearcher(SolrCore.java:2559) ~[?:?]
+	at org.apache.solr.core.SolrCore.initSearcher(SolrCore.java:1263) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1148) ~[?:?]
+	at org.apache.solr.core.SolrCore.<init>(SolrCore.java:1048) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1560) ~[?:?]
+	at org.apache.solr.core.CoreContainer.lambda$load$10(CoreContainer.java:950) ~[?:?]
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:202) ~[metrics-core-4.1.5.jar:4.1.5]
+	... 5 more
+2022-12-15 23:05:55.437 INFO  (JettyShutdownThread) [] o.e.j.s.AbstractConnector Stopped ServerConnector@2371aaca{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-12-15 23:05:55.443 INFO  (JettyShutdownThread) [] o.a.s.c.CoreContainer Shutting down CoreContainer instance=1006727288
+2022-12-15 23:05:55.446 INFO  (JettyShutdownThread) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2022-12-15 23:05:55.458 INFO  (JettyShutdownThread) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2022-12-15 23:05:55.467 INFO  (JettyShutdownThread) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2022-12-15 23:05:55.477 INFO  (JettyShutdownThread) [] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@77192705{/solr,null,STOPPED}{/opt/solr-9.0.0/server/solr-webapp/webapp}

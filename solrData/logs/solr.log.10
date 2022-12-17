@@ -1,0 +1,44 @@
+2022-12-17 12:49:29.425 INFO  (main) [] o.e.j.u.log Logging initialized @799ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-12-17 12:49:29.645 INFO  (main) [] o.e.j.s.Server jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 17.0.5+8
+2022-12-17 12:49:29.899 INFO  (main) [] o.a.s.s.CoreContainerProvider Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2022-12-17 12:49:29.909 INFO  (main) [] o.a.s.s.CoreContainerProvider  ___      _       Welcome to Apache Solr™ version 9.1.0
+2022-12-17 12:49:29.909 INFO  (main) [] o.a.s.s.CoreContainerProvider / __| ___| |_ _   Starting in standalone mode on port 8983
+2022-12-17 12:49:29.909 INFO  (main) [] o.a.s.s.CoreContainerProvider \__ \/ _ \ | '_|  Install dir: /opt/solr
+2022-12-17 12:49:29.910 INFO  (main) [] o.a.s.s.CoreContainerProvider |___/\___/_|_|    Start time: 2022-12-17T12:49:29.910230540Z
+2022-12-17 12:49:29.914 INFO  (main) [] o.a.s.s.CoreContainerProvider Solr Home: /var/solr/data (source: system property: solr.solr.home)
+2022-12-17 12:49:29.915 INFO  (main) [] o.a.s.c.SolrXmlConfig Loading solr.xml from /var/solr/data/solr.xml
+2022-12-17 12:49:29.975 INFO  (main) [] o.a.s.c.SolrResourceLoader Added 1 libs to classloader, from paths: [/opt/solr/lib]
+2022-12-17 12:49:30.641 WARN  (main) [] o.a.s.h.c.HttpShardHandlerFactory Property 'shardsWhitelist' is deprecated, please use 'allowUrls' instead.
+2022-12-17 12:49:30.875 WARN  (main) [] o.a.s.u.StartupLoggingUtils Jetty request logging enabled. Will retain logs for last 3 days. See chapter "Configuring Logging" in reference guide for how to configure.
+2022-12-17 12:49:30.877 WARN  (main) [] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2022-12-17 12:49:31.037 INFO  (main) [] o.a.s.c.CorePropertiesLocator Found 1 core definitions underneath /var/solr/data
+2022-12-17 12:49:31.038 INFO  (main) [] o.a.s.c.CorePropertiesLocator Cores are: [final_authors]
+2022-12-17 12:49:31.042 INFO  (coreLoadExecutor-10-thread-1) [] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient core cache for max 2147483647 cores with initial capacity of 1024
+2022-12-17 12:49:31.089 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.c.SolrConfig Using Lucene MatchVersion: 9.3.0
+2022-12-17 12:49:31.108 INFO  (main) [] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@76a36b71{/solr,file:///opt/solr-9.1.0/server/solr-webapp/webapp/,AVAILABLE}{/opt/solr-9.1.0/server/solr-webapp/webapp}
+2022-12-17 12:49:31.116 INFO  (main) [] o.e.j.s.RequestLogWriter Opened /var/solr/logs/2022_12_17.request.log
+2022-12-17 12:49:31.122 INFO  (main) [] o.e.j.s.AbstractConnector Started ServerConnector@7fe7c640{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-12-17 12:49:31.123 INFO  (main) [] o.e.j.s.Server Started @2498ms
+2022-12-17 12:49:31.163 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.s.IndexSchema Schema name=default-config
+2022-12-17 12:49:31.361 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2022-12-17 12:49:31.361 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.c.CoreContainer Creating SolrCore 'final_authors' using configuration from instancedir /var/solr/data/final_authors, trusted=true
+2022-12-17 12:49:31.392 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.c.SolrCore Opening new SolrCore at [/var/solr/data/final_authors], dataDir=[/var/solr/data/final_authors/data/]
+2022-12-17 12:49:31.826 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2022-12-17 12:49:31.826 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2022-12-17 12:49:31.849 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2022-12-17 12:49:31.850 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2022-12-17 12:49:31.991 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /var/solr/data/final_authors/conf
+2022-12-17 12:49:32.004 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.s.DirectSolrSpellChecker init: {accuracy=0.5, maxQueryFrequency=0.01, maxEdits=2, minPrefix=1, maxInspections=5, minQueryLength=4, name=default, field=_text_, classname=solr.DirectSolrSpellChecker, distanceMeasure=internal}
+2022-12-17 12:49:32.014 INFO  (coreLoadExecutor-10-thread-1) [ x:final_authors] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2022-12-17 12:49:32.027 INFO  (searcherExecutor-12-thread-1-processing-final_authors) [ x:final_authors] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2022-12-17 12:49:32.027 INFO  (searcherExecutor-12-thread-1-processing-final_authors) [ x:final_authors] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2022-12-17 12:49:32.043 INFO  (searcherExecutor-12-thread-1-processing-final_authors) [ x:final_authors] o.a.s.c.SolrCore Registered new searcher autowarm time: 0 ms
+2022-12-17 12:51:00.446 INFO  (JettyShutdownThread) [] o.e.j.s.AbstractConnector Stopped ServerConnector@7fe7c640{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-12-17 12:51:00.452 INFO  (JettyShutdownThread) [] o.a.s.c.CoreContainer Shutting down CoreContainer instance=638204510
+2022-12-17 12:51:00.455 INFO  (coreCloseExecutor-18-thread-1) [ x:final_authors] o.a.s.c.SolrCore CLOSING SolrCore org.apache.solr.core.SolrCore@6141544d final_authors
+2022-12-17 12:51:00.456 INFO  (coreCloseExecutor-18-thread-1) [ x:final_authors] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.final_authors tag=SolrCore@6141544d
+2022-12-17 12:51:00.488 INFO  (coreCloseExecutor-18-thread-1) [ x:final_authors] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
+2022-12-17 12:51:00.499 INFO  (JettyShutdownThread) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2022-12-17 12:51:00.508 INFO  (JettyShutdownThread) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2022-12-17 12:51:00.516 INFO  (JettyShutdownThread) [] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2022-12-17 12:51:00.527 INFO  (JettyShutdownThread) [] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@76a36b71{/solr,null,STOPPED}{/opt/solr-9.1.0/server/solr-webapp/webapp}
