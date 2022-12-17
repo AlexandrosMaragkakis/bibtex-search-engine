@@ -22,6 +22,7 @@ if (performance.navigation.type == 2) {
 <header class="col-s-12 col-m-12 col-l-12">
     <a href="index.php" style="text-decoration: none;color: #000000;">
         <h1>ASTERAS<img src="/media/images/icons8-sun-star-48.png">&nbsp BibTeX Search Engine</h1>
+        <h4>~Automated Search for TExt and ReseArcherS~</h3>
     </a>
 </header>
 <nav class="header-nav">

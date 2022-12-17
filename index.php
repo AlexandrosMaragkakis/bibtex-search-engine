@@ -6,6 +6,7 @@ require_once('header.php');
 .search-container {
     display: flex;
     align-items: center;
+    margin-top: 150px;
 }
 
 
@@ -66,10 +67,7 @@ p {
 
 
 
-<footer class="col-s-12 col-m-12 col-l-12">
-    <p class="fonts">Contact us: <b>dit19120@uop.gr</b>/<b>dit19157@uop.gr</b></p>
-</footer>
-</body>
+
 
 </html>
 <script>
