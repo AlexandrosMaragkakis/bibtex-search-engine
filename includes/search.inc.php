@@ -6,7 +6,25 @@
     $numResults = $_POST['num-results'];
     $query = $_POST['query'];
     
-   
+    if (substr($query, 0, 1) == '"' && substr($query, -1) == '"') {
+        $phrase_query = true;
+    } else {
+        $phrase_query = false;
+    }
+
+
+    if (isset($_POST['boolean-search'])) {
+        $processed_query = shell_exec('python3 ../scripts/preprocess.py -query -boolean '.$query);
+    }
+    else {
+        $processed_query = shell_exec('python3 ../scripts/preprocess.py -query -normal '.$query);
+    }
+
+    if($phrase_query == true){
+        $processed_query = '"'.$processed_query.'"';
+    }
+    
+    $processed_query = trim($processed_query);
     
     // Process the form input
     switch ($_POST['mode']) {
@@ -14,9 +32,9 @@
             //
             $solr_api = 'select?debug.explain.structured=false&debug=results&debugQuery=false&hl.fl=*&hl.fragsize=100';
             $solr_api .= '&hl.method=fastVector&hl.requireFieldMatch=false&hl.simple.post=%3C%2Fb%3E&hl.simple.pre=%3Cb%3E&hl.snippets=1';
-            $solr_api .= '&hl.usePhraseHighLighter=true&hl=true&fl=author%2Cid&indent=true&q.op=OR&rows='.$numResults.'&q='.$query.'&useParams=';
-    
-            // case "Alexandros kaloxylos" gives illegal space character
+            $solr_api .= '&hl.usePhraseHighLighter=true&hl=true&fl=author%2Cid&indent=true&q.op=OR&rows='.$numResults.'&q='.$processed_query.'&useParams=';
+            
+            
             $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
             
             $response = json_decode($response,true);

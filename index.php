@@ -40,11 +40,12 @@ p {
     <div class="search-container">
         <form action="includes/search.inc.php" method="post">
             <p>Search ASTERAS:</p>
-            <label>Number of Results: <input type="number" class="results-input" name="num-results" min="1" max="100"
+            <label>Number of Results:<input type="number" class="results-input" name="num-results" min="1" max="100"
                     value="10"></label>
-
-            <input autofocus required type="text" name="query"><input type="submit" name="submit" class="gbutton"
-                value="Go">
+            <label>Boolean search: <input type="checkbox" name="boolean-search" class="boolean-input" value="True"
+                    unchecked></label>
+            <input autofocus required type="text" size="40" style="height: 32px;" name="query">&nbsp&nbsp<input
+                type="submit" name="submit" class="gbutton" value="Go">
             <br>
             <label><input type="radio" name="mode" value="normal" style="height: 12px; width: 12px;" checked> Just
                 search!</label>

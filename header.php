@@ -1,3 +1,5 @@
+<!-- This is an HTML5 document, it doesn't contain any Hack code. -->
+<!-- I am talking to you, GitHub's language detection algorithm. -->
 <!DOCTYPE html>
 <html>
 <script>

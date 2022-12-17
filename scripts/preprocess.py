@@ -16,7 +16,11 @@ SPECIAL_CHAR_REGEX = re.compile(
     # detect punctuation characters
     r"(?P<p>(\.+)|(\?+)|(!+)|(:+)|(;+)|"
     # detect special characters
-    r"(\^+)|(\"+)|(\`+)|(\\+)|(\&+)|(\(+)|(\)+)|(\}+)|(\{+)|('+)|(-+)|(\[+)|(\]+)|(\,+)|((\d+)\b))")
+    r"(\++)|(\^+)|(\"+)|(\`+)|(\\+)|(\&+)|(\(+)|(\)+)|(\}+)|(\{+)|('+)|(-+)|(\[+)|(\]+)|(\,+)|((\d+)\b))")
+
+SPECIAL_CHAR_REGEX_FOR_QUERIES = re.compile(
+    r"(\(+)|(\)+)|(\.+)|(\?+)|(!+)|(:+)|(;+)|(\++)|(\^+)|(\`+)|(\\+)|(\&+)|(\}+)|(\{+)|('+)|(-+)|(\[+)|(\]+)|(\,+)"
+)
 
 
 def find_full_name(name, authors):
@@ -79,7 +83,7 @@ def delete_author(id):
         return 'FAILURE'
 
 
-def stem_str(line: str):
+def stem_str(line: str, type: str):
 
     stemmer = PorterStemmer()
     # porter stemmer can't work on multiple words, so we split the line
@@ -88,18 +92,23 @@ def stem_str(line: str):
     # create list with stemmed words
     stemmed = [stemmer.stem(word) for word in words]
     stemmed = " ".join(stemmed)
+
     # remove special chars
     # must replace with ' ' because for example air-to-ground results in airtoground for some reason
-    stemmed = SPECIAL_CHAR_REGEX.sub(' ', string=stemmed)
+    if type == 'bibtex':
+        stemmed = SPECIAL_CHAR_REGEX.sub(' ', string=stemmed)
+    else:
+        stemmed = SPECIAL_CHAR_REGEX_FOR_QUERIES.sub(' ', string=stemmed)
 
     # remove consecutive spaces that occur after stemming and spaces at the edges
     stemmed = re.sub('\s+', ' ', string=stemmed)
     stemmed = stemmed.rstrip().lstrip()
 
-    text_tokens = word_tokenize(stemmed)
-    tokens_without_sw = [
-        word for word in text_tokens if not word in stopwords.words()]
-    stemmed = ' '.join(tokens_without_sw)
+    if type != 'boolean':
+        text_tokens = word_tokenize(stemmed)
+        tokens_without_sw = [
+            word for word in text_tokens if not word in stopwords.words()]
+        stemmed = ' '.join(tokens_without_sw)
 
     return stemmed
 
@@ -110,8 +119,6 @@ def debug(text):
 
 
 def preprocess_bibtex(filename):
-
-    # TODO [IMPORTANT]:     check if the name appears to the file
     # TODO [NOT IMPORTANT]: field for unique years
 
     with open(filename) as bibtext_file:
@@ -157,9 +164,9 @@ def preprocess_bibtex(filename):
 
     # preprocessing stage
 
-    output['title'] = stem_str(output.get('title'))
-    output['booktitle'] = stem_str(output.get('booktitle'))
-    output['journal'] = stem_str(output.get('journal'))
+    output['title'] = stem_str(output.get('title'), 'bibtex')
+    output['booktitle'] = stem_str(output.get('booktitle'), 'bibtex')
+    output['journal'] = stem_str(output.get('journal'), 'bibtex')
 
     # write to file as JSON object
     path = "tmp.json"
@@ -167,19 +174,33 @@ def preprocess_bibtex(filename):
         json.dump(output, f)
 
 
-def preprocess_query(query: list):
-    # TODO logic, do not process boolean keywords or field names
+def preprocess_normal_query(query: list):
+    if len(query) > 1:
+        query = ' '.join(query)
+    else:
+        query = query[0]
 
-    pass
+    stemmed_query = stem_str(query, 'normal query')
+    stemmed_query = stemmed_query.replace(' ', '%20')
+    print(stemmed_query)
+
+
+def preprocess_boolean_query(query: list):
+    query = ' '.join(query)
+    stemmed_query = stem_str(query, 'boolean')
+    stemmed_query = stemmed_query.replace('or', 'OR').replace(
+        'and', 'AND').replace('not', 'NOT')
+    stemmed_query = stemmed_query.replace(' ', '%20')
+    print(stemmed_query)
 
 
 def main():
     if sys.argv[1] == '-bibtex':
         preprocess_bibtex(sys.argv[2])
-        # print('tmp.json')
-    elif sys.argv[1] == '-query':
-        preprocess_query(sys.argv[2:])
-
+    elif sys.argv[1] == '-query' and sys.argv[2] == '-normal':
+        preprocess_normal_query(sys.argv[3:])
+    elif sys.argv[1] == '-query' and sys.argv[2] == '-boolean':
+        preprocess_boolean_query(sys.argv[3:])
     else:
         print('Usage: python3 preprocess.py -bibtex tryfonopoulos.bib')
         print('       python3 preprocess.py -query wireless networks')
