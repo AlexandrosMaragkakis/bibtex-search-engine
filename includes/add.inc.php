@@ -34,7 +34,7 @@
             $status = (int)$xmlElement->lst[0]->int[0];
             
             if ($status != 0) {
-                echo "Something went wrong.";
+                header('Location: http://localhost:8088/add-doc.php?upload=false');
     
             }  
         }
@@ -43,7 +43,7 @@
         $json = json_decode($output);
         $status = $json->responseHeader->status;
         if ($status == 0) {
-            echo $_POST['name'].' was successfully indexed.';
+            header('Location: http://localhost:8088/add-doc.php?upload=true');
         }  
         
         exec('rm tmp.json && rm '.$filename);
@@ -66,7 +66,7 @@
             $myfile = fopen("result.txt", "r") or die("Unable to open file!");
             $result = fread($myfile,filesize("result.txt")).rtrim(' ');
             if($result != "SUCCESS"){
-                echo "FAILURE";
+                header('Location: http://localhost:8088/add-doc.php?upload=false');
                 exec('rm result.txt');
                 exit(1);
             }
@@ -75,7 +75,7 @@
             $json = json_decode($output);
             $status = $json->responseHeader->status;
             if ($status == 0) {
-                echo 'SUCCESS';
+                header('Location: http://localhost:8088/add-doc.php?upload=true');
             }  
             
         }
@@ -85,12 +85,13 @@
             $myfile = fopen("result.txt", "r") or die("Unable to open file!");
             $result = fread($myfile,filesize("result.txt")).rtrim(' ');
             if($result == "SUCCESS"){
-                echo "SUCCESS";
+                header('Location: http://localhost:8088/add-doc.php?upload=true');
             }
             else{
-                echo "FAILURE";
+                header('Location: http://localhost:8088/add-doc.php?upload=false');
             }
         }
         break;
     }
     exec('rm result.txt');
+    exit();

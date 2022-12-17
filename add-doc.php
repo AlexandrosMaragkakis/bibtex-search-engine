@@ -1,7 +1,16 @@
 <?php
 require_once('header.php');
 ?>
-
+<?php
+    if(isset($_GET['upload'])) {
+        if ($_GET['upload'] == "false") {
+            echo "<script>alert('Something went wrong.');</script>";
+       }
+        else {
+            echo "<script>alert('The author was indexed successfully.');</script>";
+        }
+    }
+?>
 <main>
     <br><br>
     <hr>
