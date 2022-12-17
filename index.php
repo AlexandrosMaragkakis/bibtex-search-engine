@@ -65,7 +65,7 @@ p1 {
             <br>
         </form>
     </div><br><br><br>
-    <p1 class="form">Need help? Boolean queries are contructed with AND, OR and NOT. If you
+    <p1 class="form"><b>Need help?</b>&nbsp Boolean queries are contructed with AND, OR and NOT. If you
         want to search specifically for an author, please use the "Search by author" option
     </p1>
 </main>
