@@ -41,13 +41,16 @@ function calculateRelevance() {
     $("#result").html('Calculating...');
     var author1 = $("#author1").val();
     var author2 = $("#author2").val();
+    var rows = $("#rows").val();
+    console.log("rows:", rows);
     // Send an HTTP request to the server to calculate the relevance
     $.ajax({
         method: "POST",
         url: "includes/author-relevance.inc.php",
         data: {
             value1: author1,
-            value2: author2
+            value2: author2,
+            value3: rows
         },
         success: function(result) {
             // Update the webpage with the result of the calculation
@@ -65,6 +68,10 @@ function calculateRelevance() {
 
 select {
     font-size: 18px;
+}
+
+h3 {
+    display: block;
 }
 </style>
 
@@ -101,7 +108,8 @@ select {
             }
             $html .= '</select>&nbsp&nbsp&nbsp';
 
-
+            $html .= '<label>Number of Results:<input id="rows" type="number" class="results-input" name="rows" min="1" max="100"
+            value="10"></label>';
             $html .= '<input style="width: 250px;" class="gbutton" type="button" value="Go" onclick="checkForm()">';
             echo $html;
         ?>

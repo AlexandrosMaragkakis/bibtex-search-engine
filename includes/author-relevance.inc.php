@@ -2,7 +2,9 @@
     
     $author1_id = $_POST['value1'];
     $flag = 'similar';
-    if(isset($_POST['value2'])) {
+    $numresults = $_POST['value3'];
+    
+    if($_POST['value2'] != '') {
         $author2_id = $_POST['value2'];
         $flag = 'comparison';
     }
@@ -12,11 +14,26 @@
     }
     else{
         $solr_server = 'http://solr:8983/solr/final_authors/';
-        $solr_api = 'select?indent=true&q.op=OR&q=*%3A*&rows=0&useParams=&wt=json';
+        $solr_api = 'select?debugQuery=true&indent=true&q.op=OR&q=%7B!mlt%20qf%3Dbooktitle%2Ctitle%2Cjournal%7D'.$author1_id.'&rows='.$numresults.'&useParams';
         $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
-
+        
         $response = json_decode($response,true);
-        $numFound = $response['response']['numFound'];
+        $html = ''; //"<u>Authors that are similar to ".$author1_id."</u>\n";
+            
+        foreach ($response["response"]["docs"] as $doc) {
+                
+            $current_id = $doc["id"];
+
+            $score = $response["debug"]["explain"][$current_id];
+            $score = substr($score, 0, 6);
+            $score = trim($score);
+
+            $html .= "<h3>";
+            $html .= "<u>".$doc["author"][0]."</u>"." [".$score."]</h3>";
+            
+            $html .= "<hr><br>";
+        }
+        echo $html;
     }
     
 
