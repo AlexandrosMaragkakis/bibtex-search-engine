@@ -17,6 +17,7 @@ if (performance.navigation.type == 2) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style1.css">
     <link rel="icon" href="/media/images/icons8-sun-star-16.png">
+    <script src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
 </head>
 <header class="col-s-12 col-m-12 col-l-12">
     <a href="index.php" style="text-decoration: none;color: #000000;">

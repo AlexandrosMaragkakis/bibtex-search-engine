@@ -2,7 +2,6 @@
 require_once('header.php');
 ?>
 
-
 <main>
     <br><br>
     <hr>
