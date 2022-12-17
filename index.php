@@ -6,9 +6,8 @@ require_once('header.php');
 .search-container {
     display: flex;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 100px;
 }
-
 
 form {
     margin: auto;
@@ -33,6 +32,12 @@ p {
     text-align: center;
     margin-bottom: 5px;
     margin-top: 40px
+}
+
+p1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
 }
 </style>
 
@@ -59,15 +64,12 @@ p {
                 journal</label>
             <br>
         </form>
-    </div>
+    </div><br><br><br>
+    <p1 class="form">Need help? Boolean queries are contructed with AND, OR and NOT. If you
+        want to search specifically for an author, please use the "Search by author" option
+    </p1>
 </main>
-
 </body>
-
-
-
-
-
 
 </html>
 <script>

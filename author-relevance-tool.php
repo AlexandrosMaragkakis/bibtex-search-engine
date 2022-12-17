@@ -20,9 +20,6 @@ function disableOption() {
     }
 }
 
-
-
-// this might be unnecessary if we add the 'required' keyword to the <select>
 function checkForm() {
     // Get the value of the dropdown menus
     var value1 = document.getElementById("author1").value;
@@ -111,18 +108,7 @@ select {
     </form>
 </div>
 <div class="form-container" id="result"></div>
-
-
-
-
-
-
-
-
-
 </body>
-
-
 
 </html>
 <script>

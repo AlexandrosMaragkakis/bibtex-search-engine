@@ -6,7 +6,6 @@ require_once('header.php');
     <br><br>
     <hr>
     <div style="width: 40%; margin: auto;">
-
         <form action="includes/add.inc.php" method="post">
             Enter the <b>full</b> name of the author: <br>
             <input autofocus required type="text" name="name">
@@ -23,8 +22,6 @@ require_once('header.php');
     </div>
     <hr>
 </main>
-
-
 </body>
 
 </html>

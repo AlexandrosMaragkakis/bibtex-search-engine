@@ -1,13 +1,9 @@
 <?php
 require_once('header.php');
 ?>
-
-
-
 <main>
     <br><br>
     <?php 
-        
         $solr_server = 'http://solr:8983/solr/final_authors/';
         $solr_api = 'select?indent=true&q.op=OR&q=*%3A*&rows=0&useParams=&wt=json';
         $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
@@ -57,18 +53,14 @@ require_once('header.php');
     </form>
 
 </main>
-
 </body>
 
 </html>
-
-
 <script>
 // Class active so that the current page goes green.
 document.querySelector("#delete").outerHTML =
     '<a id="delete" class="col-s-12 col-m-3 col-l-3 active" title="Delete Document" href="/delete-doc.php">Delete Document</a>';
 </script>
-
 
 <script>
 // Get the form and the submit button.

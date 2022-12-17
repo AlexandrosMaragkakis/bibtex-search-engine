@@ -9,8 +9,6 @@ if (performance.navigation.type == 2) {
 }
 </script>
 
-
-
 <head>
     <title>ASTERAS</title>
     <meta charset="utf-8">
@@ -24,6 +22,17 @@ if (performance.navigation.type == 2) {
         <h1>ASTERAS<img src="/media/images/icons8-sun-star-48.png">&nbsp BibTeX Search Engine</h1>
         <h4>~Automated Search for TExt and ReseArcherS~</h3>
     </a>
+    <?php 
+        $solr_server = 'http://solr:8983/solr/final_authors/';
+        $solr_api = 'select?indent=true&q.op=OR&q=*%3A*&rows=0&useParams=&wt=json';
+        $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
+
+        $response = json_decode($response,true);
+        $numFound = $response['response']['numFound'];
+        
+        //$numFound = $response['response']['numFound'];
+        echo '<div style="text-align: right; margin-right: 20px">&nbsp&nbsp&nbspNumber of documents in the index: '.$numFound.'</div>';
+    ?>
 </header>
 <nav class="header-nav">
     <ul class="list">
@@ -35,7 +44,6 @@ if (performance.navigation.type == 2) {
                 Document</a></li>
         <li><a id="delete" class="col-s-12 col-m-3 col-l-3" title="Delete Document" href="/delete-doc.php">Delete
                 Document</a></li>
-
     </ul>
 </nav>
 
