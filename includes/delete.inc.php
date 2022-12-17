@@ -1,7 +1,5 @@
 <?php
-    
-    switch($_POST['submit']) {
-        
+    switch($_POST['submit']) {   
     case 'Delete':
         
         $selectedDocIds = $_POST['doc-id'];
@@ -16,7 +14,10 @@
             $xmlElement = new SimpleXMLElement($output);
             $status = (int)$xmlElement->lst[0]->int[0];
             if ($status == 0) {
-                echo 'Deletion successful.';
+                header('Location: http://localhost:8088/delete-doc.php?delete=true');
+            }
+            else {
+                header('Location: http://localhost:8088/delete-doc.php?delete=false');
             }
         }
         break;
@@ -26,7 +27,7 @@
         $solr_api = 'update?commit=true -H "Content-Type: text/xml" --data-binary ';
         $delete_xml = '<delete><query>*:*</query></delete>';
         $output = shell_exec("curl -X POST ".$solr_server.$solr_api."'".$delete_xml."'");
-        echo "The core is now empty.";
+        header('Location: http://localhost:8088/delete-doc.php?deleteall=true');
         
         break;
     }

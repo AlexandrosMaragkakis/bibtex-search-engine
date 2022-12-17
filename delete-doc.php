@@ -1,6 +1,20 @@
 <?php
 require_once('header.php');
 ?>
+
+<?php
+    if(isset($_GET['delete'])) {
+        if ($_GET['delete'] == "false") {
+            echo "<script>alert('Something went wrong.');</script>";
+       }
+       else {
+            echo "<script>alert('Author was successfully deleted.');</script>";
+       }
+    }
+    elseif(isset($_GET['deleteall'])) {
+        echo "<script>alert('All documents were deleted.');</script>";
+    }
+?>
 <main>
     <br><br>
     <?php 
