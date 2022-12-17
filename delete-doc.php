@@ -66,7 +66,7 @@ require_once('header.php');
 <script>
 // Class active so that the current page goes green.
 document.querySelector("#delete").outerHTML =
-    '<a id="delete" class="col-s-12 col-m-4 col-l-4 active" title="Delete Document" href="/delete-doc.php">Delete Document</a>';
+    '<a id="delete" class="col-s-12 col-m-3 col-l-3 active" title="Delete Document" href="/delete-doc.php">Delete Document</a>';
 </script>
 
 

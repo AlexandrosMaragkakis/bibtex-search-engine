@@ -75,5 +75,5 @@ p {
 <script>
 // class active so that the current page goes green
 document.querySelector("#search").outerHTML =
-    '<a id="index" class="col-s-12 col-m-4 col-l-4 active" title="Search" href="/index.php">Search</a>';
+    '<a id="index" class="col-s-12 col-m-3 col-l-3 active" title="Search" href="/index.php">Search</a>';
 </script>

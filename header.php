@@ -25,11 +25,15 @@ if (performance.navigation.type == 2) {
 </header>
 <nav class="header-nav">
     <ul class="list">
-        <li><a id="search" class="col-s-12 col-m-2 col-l-4" title="Search" href="/index.php">Search</a></li>
-        <li><a id="add" class="col-s-12 col-m-2 col-l-4" title="Add New Document" href="/add-doc.php">Add New
+        <li><a id="search" class="col-s-12 col-m-3 col-l-3" title="Search" href="/index.php">Search</a></li>
+        <li><a id="relevance" class="col-s-12 col-m-3 col-l-3" title="Author Relevance Tool"
+                href="/author-relevance-tool.php">Author Relevance Tool
+            </a></li>
+        <li><a id="add" class="col-s-12 col-m-3 col-l-3" title="Add New Document" href="/add-doc.php">Add New
                 Document</a></li>
-        <li><a id="delete" class="col-s-12 col-m-2 col-l-4" title="Delete Document" href="/delete-doc.php">Delete
+        <li><a id="delete" class="col-s-12 col-m-3 col-l-3" title="Delete Document" href="/delete-doc.php">Delete
                 Document</a></li>
+
     </ul>
 </nav>
 

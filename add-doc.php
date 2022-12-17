@@ -34,5 +34,5 @@ require_once('header.php');
 <script>
 // class active so that the current page goes green
 document.querySelector("#add").outerHTML =
-    '<a id="add" class="col-s-12 col-m-4 col-l-4 active" title="Add New Document" href="/add-doc.php">Add New Document</a>';
+    '<a id="add" class="col-s-12 col-m-3 col-l-3 active" title="Add New Document" href="/add-doc.php">Add New Document</a>';
 </script>
