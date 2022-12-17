@@ -163,7 +163,6 @@ def preprocess_bibtex(filename):
                 'journal') + ' ' + entry.get('journal')
 
     # preprocessing stage
-
     output['title'] = stem_str(output.get('title'), 'bibtex')
     output['booktitle'] = stem_str(output.get('booktitle'), 'bibtex')
     output['journal'] = stem_str(output.get('journal'), 'bibtex')
@@ -188,8 +187,8 @@ def preprocess_normal_query(query: list):
 def preprocess_boolean_query(query: list):
     query = ' '.join(query)
     stemmed_query = stem_str(query, 'boolean')
-    stemmed_query = stemmed_query.replace('or', 'OR').replace(
-        'and', 'AND').replace('not', 'NOT')
+    stemmed_query = stemmed_query.replace(' or ', ' OR ').replace(
+        ' and ', ' AND ').replace(' not ', ' NOT ')
     stemmed_query = stemmed_query.replace(' ', '%20')
     print(stemmed_query)
 

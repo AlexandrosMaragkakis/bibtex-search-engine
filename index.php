@@ -35,7 +35,6 @@ p {
 }
 </style>
 
-
 <main>
     <div class="search-container">
         <form action="includes/search.inc.php" method="post">
@@ -57,14 +56,9 @@ p {
                 title</label>
             <label><input type="radio" name="mode" value="journal" style="height: 12px; width: 12px;"> Search by
                 journal</label>
-
             <br>
         </form>
     </div>
-    <hr>
-
-
-
 </main>
 
 </body>
