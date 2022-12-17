@@ -45,6 +45,7 @@
         if ($status == 0) {
             echo $_POST['name'].' was successfully indexed.';
         }  
+        
         exec('rm tmp.json && rm '.$filename);
         break;
         
@@ -76,6 +77,7 @@
             if ($status == 0) {
                 echo 'SUCCESS';
             }  
+            
         }
         // zip file case
         else{
@@ -89,8 +91,6 @@
                 echo "FAILURE";
             }
         }
-        
-        
-        exec('rm result.txt');
         break;
     }
+    exec('rm result.txt');

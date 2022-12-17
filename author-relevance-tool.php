@@ -41,14 +41,16 @@ function checkForm() {
 // This function is triggered when the user clicks the submit button
 function calculateRelevance() {
     // Get the selected values from the form
-    var value1 = $("#author1").val();
-    var value2 = $("#author2").val();
+    $("#result").html('Calculating...');
+    var author1 = $("#author1").val();
+    var author2 = $("#author2").val();
     // Send an HTTP request to the server to calculate the relevance
     $.ajax({
+        method: "POST",
         url: "includes/author-relevance.inc.php",
         data: {
-            value1: value1,
-            value2: value2
+            value1: author1,
+            value2: author2
         },
         success: function(result) {
             // Update the webpage with the result of the calculation
@@ -79,7 +81,7 @@ select {
     are.</p><br>
 
 <div class="form-container">
-    <form action='includes/author-relevance.inc.php' method='post'>
+    <form>
         <?php
             $solr_server = 'http://solr:8983/solr/final_authors/';
             $solr_api = 'select?fl=author%2Cid&indent=true&q.op=OR&q=*%3A*&rows=1000&sort=field(author)%20asc&useParams=';
@@ -100,15 +102,15 @@ select {
             foreach ($response["response"]["docs"] as $author) {
                 $html .= '<option size="50" value="' . $author['id'] . '">' . $author['author'][0] . '</option>';
             }
-            $html .= '</select><br><br>';
+            $html .= '</select>&nbsp&nbsp&nbsp';
 
 
-            $html .= '<input style="width: 250px;" class="gbutton" type="submit" value="Go">'; //onclick="calculateRelevance()">'; // type="button"
+            $html .= '<input style="width: 250px;" class="gbutton" type="button" value="Go" onclick="checkForm()">';
             echo $html;
         ?>
     </form>
 </div>
-<div id="result"></div>
+<div class="form-container" id="result"></div>
 
 
 

@@ -4,7 +4,7 @@ if [ ! -x /usr/bin/python3 ]; then
     echo "Installing python..."
     apt-get update
     apt-get install -y python3 python3-pip
-    pip3 install requests bs4 bibtexparser nltk lxml
+    pip3 install requests bs4 bibtexparser nltk lxml scikit-learn
 fi
 
 /usr/local/bin/docker-php-entrypoint
