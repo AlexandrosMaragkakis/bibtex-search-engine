@@ -17,8 +17,7 @@
         $search_output = json_decode($search_output);
         
 
-        $filename = shell_exec('python3 ../scripts/get-bibtex.py '.$_POST['name']);
-        exec('python3 ../scripts/preprocess.py -bibtex '.$filename);
+        
         
         if(isset($search_output->{'response'}->{'docs'}[0]->{'id'})){
            
@@ -38,6 +37,16 @@
     
             }  
         }
+        
+        $filename = shell_exec('python3 ../scripts/get-bibtex.py '.$_POST['name']);
+        $output = shell_exec('python3 ../scripts/preprocess.py -bibtex '.$filename);
+        $output = trim($output);
+        
+        if ($output == "Failure") {
+            header('Location: http://localhost:8088/add-doc.php?upload=false');
+            exit();
+        }
+
 
         $output = shell_exec("curl -X POST -H 'Content-Type: application/json' --data-binary @tmp.json http://solr:8983/solr/final_authors/update/json/docs?commit=true");
         $json = json_decode($output);

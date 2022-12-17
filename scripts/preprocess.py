@@ -29,9 +29,7 @@ def find_full_name(name, authors):
         authors = SPECIAL_CHAR_REGEX.sub(' ', string=authors)
         authors = authors.split(' and\n')
         for author in authors:
-
             if name.lower() in author.lower():
-
                 return re.sub('\s+', ' ', string=author).rstrip().lstrip()
     except:
         # single author
@@ -194,15 +192,18 @@ def preprocess_boolean_query(query: list):
 
 
 def main():
-    if sys.argv[1] == '-bibtex':
-        preprocess_bibtex(sys.argv[2])
-    elif sys.argv[1] == '-query' and sys.argv[2] == '-normal':
-        preprocess_normal_query(sys.argv[3:])
-    elif sys.argv[1] == '-query' and sys.argv[2] == '-boolean':
-        preprocess_boolean_query(sys.argv[3:])
-    else:
-        print('Usage: python3 preprocess.py -bibtex tryfonopoulos.bib')
-        print('       python3 preprocess.py -query wireless networks')
+    try:
+        if sys.argv[1] == '-bibtex':
+            preprocess_bibtex(sys.argv[2])
+        elif sys.argv[1] == '-query' and sys.argv[2] == '-normal':
+            preprocess_normal_query(sys.argv[3:])
+        elif sys.argv[1] == '-query' and sys.argv[2] == '-boolean':
+            preprocess_boolean_query(sys.argv[3:])
+        else:
+            print('Usage: python3 preprocess.py -bibtex tryfonopoulos.bib')
+            print('       python3 preprocess.py -query wireless networks')
+    except IndexError:
+        print("Failure")
 
 
 main()
