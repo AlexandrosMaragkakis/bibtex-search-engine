@@ -1,0 +1,3 @@
+Project boot time:
+    fresh install: 1 minute
+        Internet speed: 50Mbps
