@@ -1,36 +1,46 @@
+import sys
 import requests
 import bs4
-import sys
-# Function to find the ID of a name on DBLP
 
 
 def find_id(name):
+    """
+    Finds the id of an author by searching their name on DBLP.
+    """
+
     # Search for the name on DBLP
-    #url = f"https://dblp.org/search?q={name}"
     url = f"https://dblp.org/search/author/api?q={name}&h=1000&format=xml"
 
+    # Send a request to the URL and retrieve the response
     response = requests.get(url)
+
+    # Parse the response as XML
     soup = bs4.BeautifulSoup(response.text, "xml")
 
+    # Extract the url of the first result
     result = soup.find("url")
     url_with_id = result.text
+
+    # Extract the id from the url
     id = url_with_id.split(sep='/')
     id = '/'.join(id[-2:])
 
+    # Return the id if it was found
     if id:
         return id
 
     # Return None if the name was not found
     return None
 
-# Function to download the BibTeX file for a given ID
-
 
 def download_bibtex(id, name):
+    """
+    Download the BibTeX file from DBLP given the author's ID and name.
+    Save the file to a file named after the name.
+    """
     # Download the BibTeX file from DBLP
     url = f"https://dblp.org/pid/{id}.bib"
     response = requests.get(url)
-    #lastname = name.split(' ')[-1]
 
     # Save the BibTeX file to a file named after the name
     filename = name.split(' ')
@@ -41,10 +51,13 @@ def download_bibtex(id, name):
         file.write(response.text)
 
     return f"{path}{filename}.bib"
-# Main function
 
 
 def main():
+    """
+    Main function for the get-bibtex script.
+    Check if a name was provided as an argument, and if so, find the ID of the name on DBLP and download the BibTeX file.
+    """
     # Check if a name was provided as an argument
     if len(sys.argv) < 2:
         print("Please provide a name as an argument")

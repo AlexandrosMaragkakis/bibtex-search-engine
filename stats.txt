@@ -1,3 +1,16 @@
 Project boot time:
     fresh install: 1 minute
         Internet speed: 50Mbps
+
+"more like this" relevance finder 
+provides top 2 for costas vassilakis: Manolis Wallace [11.34] George Lepouras [11.10]
+
+but, if we use the vector space model,
+Costas Vassilakis and Manolis Wallace score 0.65
+and Costas Vassilakis and George Lepouras score 0.74
+so vector space calculations tell us that
+Costas Vassilakis' most similar author is George Lepouras
+
+
+NOT networks -boolean query- does not work as expected due to the way we process the boolean keyword
+wireless NOT networks, works fine
