@@ -1,5 +1,9 @@
 <?php
 
+    $UPLOAD_FAILED_URL = 'Location: http://localhost:8088/add-doc.php?upload=false';
+    $UPLOAD_SUCCEDED_URL = 'Location: http://localhost:8088/add-doc.php?upload=true';
+    $OPEN_FILE_ERROR_MSG = "Unable to open file!";
+    $REMOVE_RESULTS_COMMAND = 'rm result.txt';
     switch ($_POST['submit']) {
 
         case 'Find':
@@ -40,7 +44,7 @@
 
                 // If the delete was not successful, redirect to the add-doc page with an error message
                 if ($status != 0) {
-                    header('Location: http://localhost:8088/add-doc.php?upload=false');
+                    header($UPLOAD_FAILED_URL);
 
                 }
             }
@@ -52,15 +56,15 @@
             exec('python3 ../scripts/preprocess.py -bibtex '.$filename);
 
             // Open the result file produced by the preprocessing script
-            $myfile = fopen("result.txt", "r") or die("Unable to open file!");
+            $myfile = fopen("result.txt", "r") or die($OPEN_FILE_ERROR_MSG);
 
             // Read the contents of the result file
             $result = fread($myfile, filesize("result.txt")).rtrim(' ');
 
             // If the result is not "SUCCESS", redirect to the add-doc page with an error message
             if ($result != "SUCCESS") {
-                header('Location: http://localhost:8088/add-doc.php?upload=false');
-                exec('rm result.txt');
+                header($UPLOAD_FAILED_URL);
+                exec($REMOVE_RESULTS_COMMAND);
                 exit(1);
             }
 
@@ -75,7 +79,7 @@
 
             // If the status code is 0, the indexing was successful and the user is redirected to the add-doc page with a success message
             if ($status == 0) {
-                header('Location: http://localhost:8088/add-doc.php?upload=true');
+                header($UPLOAD_SUCCEDED_URL);
             }
 
             // Clean up by deleting the temporary JSON file and the BibTeX file
@@ -100,15 +104,15 @@
                 $output = shell_exec('python3 ../scripts/preprocess.py -bibtex '.$filename);
 
                 // Open the result file produced by the preprocessing script
-                $myfile = fopen("result.txt", "r") or die("Unable to open file!");
+                $myfile = fopen("result.txt", "r") or die($OPEN_FILE_ERROR_MSG);
 
                 // Read the contents of the result file
                 $result = fread($myfile, filesize("result.txt")).rtrim(' ');
 
                 // If the result is not "SUCCESS", redirect to the add-doc page with an error message
                 if ($result != "SUCCESS") {
-                    header('Location: http://localhost:8088/add-doc.php?upload=false');
-                    exec('rm result.txt');
+                    header($UPLOAD_FAILED_URL);
+                    exec($REMOVE_RESULTS_COMMAND);
                     exit(1);
                 }
 
@@ -126,7 +130,7 @@
 
                 // If the status code is 0, the indexing was successful and the user is redirected to the add-doc page with a success message
                 if ($status == 0) {
-                    header('Location: http://localhost:8088/add-doc.php?upload=true');
+                    header($UPLOAD_SUCCEDED_URL);
                 }
              } else {
 		
@@ -134,21 +138,24 @@
                 exec('python3 ../scripts/mass-import.py '.$filename);
 
                 // Open the result file produced by the mass-import script
-                $myfile = fopen("result.txt", "r") or die("Unable to open file!");
+                $myfile = fopen("result.txt", "r") or die($OPEN_FILE_ERROR_MSG);
 
                 // Read the contents of the result file
                 $result = fread($myfile, filesize("result.txt")).rtrim(' ');
 
                 // If the result is "SUCCESS", redirect to the add-doc page with a success message
                 if ($result == "SUCCESS") {
-                    header('Location: http://localhost:8088/add-doc.php?upload=true');
+                    header($UPLOAD_SUCCEDED_URL);
                 } else { // If the result is not "SUCCESS", redirect to the add-doc page with an error message
-                    header('Location: http://localhost:8088/add-doc.php?upload=false');
+                    header($UPLOAD_FAILED_URL);
                 }
             }
             break;
+        default:
+            header($UPLOAD_FAILED_URL);
+            break;
         }
     // Clean up by deleting the result file and exit
-    exec('rm result.txt');
+    exec($REMOVE_RESULTS_COMMAND);
 exit();
 

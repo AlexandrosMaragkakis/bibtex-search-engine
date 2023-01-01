@@ -59,7 +59,7 @@ def find_full_name(name, authors):
             if name.lower() in author.lower():
                 # Remove multiple whitespace characters from the author name
                 return re.sub(r'\s+', ' ', string=author).rstrip().lstrip()
-    except:
+    except TypeError:
         # If an exception is raised (e.g. in the case of a single author), return the full list of authors
         return authors
 
@@ -86,7 +86,7 @@ def is_indexed(name):
     try:
         # Replace spaces in the name with %20 for the curl request
         name = name.replace(' ', '%20')
-    except:
+    except TypeError:
         pass
 
     # Set the base URL of the Solr instance and the API endpoints

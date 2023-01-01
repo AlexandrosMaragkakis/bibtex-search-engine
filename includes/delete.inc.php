@@ -40,5 +40,8 @@
             header('Location: http://localhost:8088/delete-doc.php?deleteall=true');
             
             break;
+        default:
+            header('Location: http://localhost:8088/delete-doc.php?delete=false');
+            break;
         }
 
