@@ -5,8 +5,7 @@ require_once('header.php');
     if (isset($_GET['upload'])) {
         if ($_GET['upload'] == "false") {
             echo "<script>alert('Something went wrong.');</script>";
-       }
-       else {
+       } else {
             echo "<script>alert('The author was indexed successfully.');</script>";
        }
     }

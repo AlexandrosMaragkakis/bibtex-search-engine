@@ -95,7 +95,7 @@
             $extension = $path_parts['extension'];
 
             // If the file is not a ZIP file, it is assumed to be a BibTeX file
-            if($extension != "zip"){
+            if ($extension != "zip") {
                 // Execute a Python script to preprocess the BibTeX file and extract relevant information
                 $output = shell_exec('python3 ../scripts/preprocess.py -bibtex '.$filename);
 
