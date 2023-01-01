@@ -226,12 +226,12 @@
         default:
             echo "If you see me, please pretend you don't.";
             break;
-        
-        // If no documents are found, display a message and image
-        if ($numFound == 0){
-            echo '<p>No documents were found<br>You did a hole in the water. See for yourself:</p><br>';
-            echo '<img src="/media/images/hole-in-the-water.png">';    
-        }
-}
+    }
+    // If no documents are found, display a message and image
+    if ($numFound == 0){
+        echo '<p>No documents were found<br>You did a hole in the water. See for yourself:</p><br>';
+        echo '<img src="/media/images/hole-in-the-water.png">';    
+    }
+
     
     
