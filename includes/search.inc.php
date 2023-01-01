@@ -26,7 +26,8 @@
 
     // If the search query was a phrase query, enclose it in quotation marks again
     if($phrase_query == true){
-        $processed_query = '"'.$processed_query.'"';
+        $processed_query = trim($processed_query);
+        $processed_query = '%22'.$processed_query.'%22';
     }
     
     // Trim any leading or trailing white space from the processed query
