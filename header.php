@@ -1,7 +1,7 @@
 <!-- This is an HTML5 document, it doesn't contain any Hack code. -->
 <!-- I am talking to you, GitHub's language detection algorithm. -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <script>
 // Reload page every time when accessed from history, f.e. the back button.
 if (performance.navigation.type == 2) {
@@ -19,7 +19,7 @@ if (performance.navigation.type == 2) {
 </head>
 <header class="col-s-12 col-m-12 col-l-12">
     <a href="index.php" style="text-decoration: none;color: #000000;">
-        <h1>ASTERAS<img src="/media/images/icons8-sun-star-48.png">&nbsp BibTeX Search Engine</h1>
+        <h1>ASTERAS<img src="/media/images/icons8-sun-star-48.png" alt="A star.">&nbsp BibTeX Search Engine</h1>
         <h4>~Automated Search for TExt and ReseArcherS~</h3>
     </a>
     <?php 
