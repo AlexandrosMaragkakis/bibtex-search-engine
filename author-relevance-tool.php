@@ -124,3 +124,4 @@ h3 {
 document.querySelector("#relevance").outerHTML =
     '<a id="relevance" class="col-s-12 col-m-3 col-l-3 active" title="Author Relevance Tool" href="/author-relevance-tool.php">Author Relevance Tool';
 </script>
+

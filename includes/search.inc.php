@@ -18,14 +18,13 @@
     if (isset($_POST['boolean-search'])) {
         // Execute the preprocess script with the boolean search option
         $processed_query = shell_exec('python3 ../scripts/preprocess.py -query -boolean '.$query);
-    }
-    else {
+    } else {
         // Execute the preprocess script with the normal search option
         $processed_query = shell_exec('python3 ../scripts/preprocess.py -query -normal '.$query);
     }
 
     // If the search query was a phrase query, enclose it in quotation marks again
-    if($phrase_query == true){
+    if ($phrase_query) {
         $processed_query = trim($processed_query);
         $processed_query = '%22'.$processed_query.'%22';
     }
@@ -43,7 +42,7 @@
             
             // Execute the search query and store the response
             $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
-            $response = json_decode($response,true);
+            $response = json_decode($response, true);
 
             // Get the number of documents found in the search
             $numFound = $response['response']['numFound'];
@@ -63,16 +62,13 @@
 
                 // Check if any of the highlighted fields for the current document are set
                 // If so, store the first value in $highlighted
-                if(isset($response["highlighting"][$current_id]["title"][0])) {
+                if (isset($response["highlighting"][$current_id]["title"][0])) {
                     $highlighted = $response["highlighting"][$current_id]["title"][0];
-                }
-                elseif (isset($response["highlighting"][$current_id]["booktitle"][0])) {
+                } elseif (isset($response["highlighting"][$current_id]["booktitle"][0])) {
                     $highlighted = $response["highlighting"][$current_id]["booktitle"][0];
-                }
-                elseif (isset($response["highlighting"][$current_id]["journal"][0])) {
+                } elseif (isset($response["highlighting"][$current_id]["journal"][0])) {
                     $highlighted = $response["highlighting"][$current_id]["journal"][0];
-                }
-                elseif (isset($response["highlighting"][$current_id]["author"][0])) {
+                } elseif (isset($response["highlighting"][$current_id]["author"][0])) {
                     $highlighted = $response["highlighting"][$current_id]["author"][0];
                 }
 
@@ -93,7 +89,7 @@
             $solr_api .= '&hl.usePhraseHighLighter=true&hl=true&fl=author%2Cid&indent=true&q.op=OR&rows='.$numResults.'&q=author:"'.$processed_query.'"&useParams=';
             
             $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
-            $response = json_decode($response,true);
+            $response = json_decode($response, true);
             $numFound = $response['response']['numFound'];
             
             $html = "<h1><u>Search results for: ".$query."</u></h1>\n";
@@ -106,16 +102,13 @@
                 $score = substr($score, 0, 6);
                 $score = trim($score);
 
-                if(isset($response["highlighting"][$current_id]["title"][0])) {
+                if (isset($response["highlighting"][$current_id]["title"][0])) {
                     $highlighted = $response["highlighting"][$current_id]["title"][0];
-                }
-                elseif (isset($response["highlighting"][$current_id]["booktitle"][0])) {
+                } elseif (isset($response["highlighting"][$current_id]["booktitle"][0])) {
                     $highlighted = $response["highlighting"][$current_id]["booktitle"][0];
-                }
-                elseif (isset($response["highlighting"][$current_id]["journal"][0])) {
+                } elseif (isset($response["highlighting"][$current_id]["journal"][0])) {
                     $highlighted = $response["highlighting"][$current_id]["journal"][0];
-                }
-                elseif (isset($response["highlighting"][$current_id]["author"][0])) {
+                } elseif (isset($response["highlighting"][$current_id]["author"][0])) {
                     $highlighted = $response["highlighting"][$current_id]["author"][0];
                 }
 
@@ -134,7 +127,7 @@
             $solr_api .= '&hl.usePhraseHighLighter=true&hl=true&fl=author%2Cid&indent=true&q.op=OR&rows='.$numResults.'&q=title:'.$processed_query.'&useParams=';
             
             $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
-            $response = json_decode($response,true);
+            $response = json_decode($response, true);
             $numFound = $response['response']['numFound'];
             
             $html = "<h1><u>Search results for: ".$query."</u></h1>\n";
@@ -148,7 +141,7 @@
                 $score = trim($score);
 
                 // handle documents that the query matched in some other field than title
-                if(isset($response["highlighting"][$current_id]["title"][0])) {
+                if (isset($response["highlighting"][$current_id]["title"][0])) {
                     $highlighted = $response["highlighting"][$current_id]["title"][0];
                     $html .= "<h3>";
                     $html .= "<u>".$doc["author"][0]."</u>"." [".$score."]</h3>";
@@ -166,7 +159,7 @@
             $solr_api .= '&hl.usePhraseHighLighter=true&hl=true&fl=author%2Cid&indent=true&q.op=OR&rows='.$numResults.'&q=booktitle:'.$processed_query.'&useParams=';
             
             $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
-            $response = json_decode($response,true);
+            $response = json_decode($response, true);
             $numFound = $response['response']['numFound'];
             
             $html = "<h1><u>Search results for: ".$query."</u></h1>\n";
@@ -180,7 +173,7 @@
                 $score = trim($score);
 
                 // handle documents that the query matched in some other field than title
-                if(isset($response["highlighting"][$current_id]["booktitle"][0])) {
+                if (isset($response["highlighting"][$current_id]["booktitle"][0])) {
                     $highlighted = $response["highlighting"][$current_id]["booktitle"][0];
                     $html .= "<h3>";
                     $html .= "<u>".$doc["author"][0]."</u>"." [".$score."]</h3>";
@@ -198,7 +191,7 @@
             $solr_api .= '&hl.usePhraseHighLighter=true&hl=true&fl=author%2Cid&indent=true&q.op=OR&rows='.$numResults.'&q=journal:'.$processed_query.'&useParams=';
             
             $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
-            $response = json_decode($response,true);
+            $response = json_decode($response, true);
             $numFound = $response['response']['numFound'];
             
             $html = "<h1><u>Search results for: ".$query."</u></h1>\n";
@@ -212,7 +205,7 @@
                 $score = trim($score);
 
                 // handle documents that the query matched in some other field than title
-                if(isset($response["highlighting"][$current_id]["journal"][0])) {
+                if (isset($response["highlighting"][$current_id]["journal"][0])) {
                     $highlighted = $response["highlighting"][$current_id]["journal"][0];
                     $html .= "<h3>";
                     $html .= "<u>".$doc["author"][0]."</u>"." [".$score."]</h3>";
@@ -228,10 +221,8 @@
             break;
     }
     // If no documents are found, display a message and image
-    if ($numFound == 0){
+    if ($numFound == 0) {
         echo '<p>No documents were found<br>You did a hole in the water. See for yourself:</p><br>';
-        echo '<img src="/media/images/hole-in-the-water.png">';    
+        echo '<img src="/media/images/hole-in-the-water.png">';
     }
 
-    
-    

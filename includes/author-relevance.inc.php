@@ -10,18 +10,16 @@
     $numresults = $_POST['value3'];
     
     // If the ID of the second author is provided, set the flag to "comparison"
-    if($_POST['value2'] != '') {
+    if ($_POST['value2'] != '') {
         $author2_id = $_POST['value2'];
         $flag = 'comparison';
     }
 
     // If the flag is "comparison", execute a Python script to calculate the relevance of the two authors
-    if($flag == 'comparison'){
+    if ($flag == 'comparison') {
         $result = shell_exec('python3 ../scripts/calculate_relevance.py '.$author1_id.' '.$author2_id);
         echo '<b>Results:'.$result.'</b>';
-    }
-    // If the flag is "similar", execute a Solr query to find similar authors to the first author
-    else{
+    } else {
         // Set up the Solr server URL and API endpoint for a more-like-this (MLT) query
         $solr_server = 'http://solr:8983/solr/final_authors/';
         $solr_api = 'select?debugQuery=true&indent=true&q.op=OR&q=%7B!mlt%20qf%3Dbooktitle%2Ctitle%2Cjournal%7D'.$author1_id.'&rows='.$numresults.'&useParams';
@@ -30,7 +28,7 @@
         $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
         
         // Decode the response from the Solr server
-        $response = json_decode($response,true);
+        $response = json_decode($response, true);
 
         // Initialize an empty HTML string to store the results
         $html = '';
@@ -58,4 +56,5 @@
         // Output the HTML
         echo $html;
     }
+
     

@@ -2,13 +2,13 @@
 require_once('header.php');
 ?>
 <?php
-    if(isset($_GET['upload'])) {
+    if (isset($_GET['upload'])) {
         if ($_GET['upload'] == "false") {
             echo "<script>alert('Something went wrong.');</script>";
        }
-        else {
+       else {
             echo "<script>alert('The author was indexed successfully.');</script>";
-        }
+       }
     }
 ?>
 <main>
@@ -39,3 +39,4 @@ require_once('header.php');
 document.querySelector("#add").outerHTML =
     '<a id="add" class="col-s-12 col-m-3 col-l-3 active" title="Add New Document" href="/add-doc.php">Add New Document</a>';
 </script>
+

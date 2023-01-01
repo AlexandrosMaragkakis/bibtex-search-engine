@@ -1,5 +1,5 @@
 <?php
-    switch($_POST['submit']) {   
+    switch ($_POST['submit']) {
     
         // If the form was submitted with the "Delete" button
         case 'Delete':
@@ -26,9 +26,7 @@
                 // If the delete was successful, redirect to the delete page with a success message
                 if ($status == 0) {
                     header('Location: http://localhost:8088/delete-doc.php?delete=true');
-                }
-                // If the delete was not successful, redirect to the delete page with a failure message
-                else {
+                } else { // If the delete was not successful, redirect to the delete page with a failure message
                     header('Location: http://localhost:8088/delete-doc.php?delete=false');
                 }
             }
@@ -43,5 +41,4 @@
             
             break;
         }
-    
-?>
+

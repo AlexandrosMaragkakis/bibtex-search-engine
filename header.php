@@ -22,12 +22,12 @@ if (performance.navigation.type == 2) {
         <h1>ASTERAS<img src="/media/images/icons8-sun-star-48.png" alt="A star.">&nbsp BibTeX Search Engine</h1>
         <h4>~Automated Search for TExt and ReseArcherS~</h3>
     </a>
-    <?php 
+    <?php
         $solr_server = 'http://solr:8983/solr/final_authors/';
         $solr_api = 'select?indent=true&q.op=OR&q=*%3A*&rows=0&useParams=&wt=json';
         $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
 
-        $response = json_decode($response,true);
+        $response = json_decode($response, true);
         $numFound = $response['response']['numFound'];
         
         //$numFound = $response['response']['numFound'];

@@ -3,26 +3,24 @@ require_once('header.php');
 ?>
 
 <?php
-    if(isset($_GET['delete'])) {
-        if ($_GET['delete'] == "false") {
+    if (isset($_GET['delete'])) {
+    	if ($_GET['delete'] == "false") {
             echo "<script>alert('Something went wrong.');</script>";
-       }
-       else {
+        } else {
             echo "<script>alert('Author was successfully deleted.');</script>";
-       }
-    }
-    elseif(isset($_GET['deleteall'])) {
+        }
+    } elseif (isset($_GET['deleteall'])) {
         echo "<script>alert('All documents were deleted.');</script>";
     }
 ?>
 <main>
     <br><br>
-    <?php 
+    <?php
         $solr_server = 'http://solr:8983/solr/final_authors/';
         $solr_api = 'select?indent=true&q.op=OR&q=*%3A*&rows=0&useParams=&wt=json';
         $response = shell_exec("curl -X POST "."'".$solr_server.$solr_api."'");
 
-        $response = json_decode($response,true);
+        $response = json_decode($response, true);
         $numFound = $response['response']['numFound'];
         
         //$numFound = $response['response']['numFound'];
@@ -30,7 +28,7 @@ require_once('header.php');
     ?>
     <br>
     <hr>
-    <?php 
+    <?php
     
     // Set the URL of the Solr server and the API endpoint to use.
     $solr_server = 'http://solr:8983/solr/final_authors/';
@@ -55,7 +53,7 @@ require_once('header.php');
     $html .= "</table>\n";
     $html .= '<input type="submit" id="submit1" name="submit" class="gbutton" value="Delete" disabled>';
     $html .= "</form";
-    echo $html;  
+    echo $html;
 
     ?>
 
@@ -107,3 +105,4 @@ for (checkbox of checkboxes) {
     });
 }
 </script>
+

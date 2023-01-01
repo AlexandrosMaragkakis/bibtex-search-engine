@@ -1,6 +1,6 @@
 <?php
 
-    switch($_POST['submit']) {
+    switch ($_POST['submit']) {
 
         case 'Find':
             $name = $_POST['name'];
@@ -21,7 +21,7 @@
             $search_output = json_decode($search_output);
 
             // Check if the search returned any documents with an ID
-            if(isset($search_output->{'response'}->{'docs'}[0]->{'id'})){
+            if (isset($search_output->{'response'}->{'docs'}[0]->{'id'})) {
 
                 // The search returned a document with a matching ID, so the author is already indexed
                 // Get the ID of the document
@@ -55,10 +55,10 @@
             $myfile = fopen("result.txt", "r") or die("Unable to open file!");
 
             // Read the contents of the result file
-            $result = fread($myfile,filesize("result.txt")).rtrim(' ');
+            $result = fread($myfile, filesize("result.txt")).rtrim(' ');
 
             // If the result is not "SUCCESS", redirect to the add-doc page with an error message
-            if($result != "SUCCESS"){
+            if ($result != "SUCCESS") {
                 header('Location: http://localhost:8088/add-doc.php?upload=false');
                 exec('rm result.txt');
                 exit(1);
@@ -103,10 +103,10 @@
                 $myfile = fopen("result.txt", "r") or die("Unable to open file!");
 
                 // Read the contents of the result file
-                $result = fread($myfile,filesize("result.txt")).rtrim(' ');
+                $result = fread($myfile, filesize("result.txt")).rtrim(' ');
 
                 // If the result is not "SUCCESS", redirect to the add-doc page with an error message
-                if($result != "SUCCESS"){
+                if ($result != "SUCCESS") {
                     header('Location: http://localhost:8088/add-doc.php?upload=false');
                     exec('rm result.txt');
                     exit(1);
@@ -128,9 +128,8 @@
                 if ($status == 0) {
                     header('Location: http://localhost:8088/add-doc.php?upload=true');
                 }
-            }
-            // If the file is a ZIP file, it is assumed to be a collection of BibTeX files
-            else{
+             } else {
+		
                 // Execute a Python script to process the collection of BibTeX files and extract relevant information
                 exec('python3 ../scripts/mass-import.py '.$filename);
 
@@ -138,14 +137,12 @@
                 $myfile = fopen("result.txt", "r") or die("Unable to open file!");
 
                 // Read the contents of the result file
-                $result = fread($myfile,filesize("result.txt")).rtrim(' ');
+                $result = fread($myfile, filesize("result.txt")).rtrim(' ');
 
                 // If the result is "SUCCESS", redirect to the add-doc page with a success message
-                if($result == "SUCCESS"){
+                if ($result == "SUCCESS") {
                     header('Location: http://localhost:8088/add-doc.php?upload=true');
-                }
-                // If the result is not "SUCCESS", redirect to the add-doc page with an error message
-                else{
+                } else { // If the result is not "SUCCESS", redirect to the add-doc page with an error message
                     header('Location: http://localhost:8088/add-doc.php?upload=false');
                 }
             }
@@ -153,4 +150,5 @@
         }
     // Clean up by deleting the result file and exit
     exec('rm result.txt');
-    exit();
+exit();
+
