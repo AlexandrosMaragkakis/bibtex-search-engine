@@ -30,7 +30,6 @@ if (performance.navigation.type == 2) {
         $response = json_decode($response, true);
         $numFound = $response['response']['numFound'];
         
-        //$numFound = $response['response']['numFound'];
         echo '<div style="text-align: right; margin-right: 20px">&nbsp&nbsp&nbspNumber of documents in the index: '.$numFound.'</div>';
     ?>
 </header>

@@ -22,8 +22,7 @@ require_once('header.php');
 
         $response = json_decode($response, true);
         $numFound = $response['response']['numFound'];
-        
-        //$numFound = $response['response']['numFound'];
+
         echo '<p>&nbsp&nbsp&nbspNumber of documents in the index: '.$numFound.'</p>';
     ?>
     <br>
