@@ -29,6 +29,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 2. Adjust file permissions
 
+   **_Windows users:_**
+
+   You may need to enter the following commands using `git bash`
+
    **_Linux and macOS users:_**
 
    If you are using Linux or macOS, you need to adjust the file permissions of the project directory after cloning the repository. To do this, run the following command:
@@ -45,6 +49,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Executing program
 
+**_Linux and macOS users:_**
+
 - Build the Docker images and start the containers (this may take several minutes the first time you run the app):
 
   ```
@@ -57,6 +63,10 @@ These instructions will get you a copy of the project up and running on your loc
   ```
   docker compose down
   ```
+
+**_Windows users:_**
+
+- Use Docker Desktop
 
 The Python libraries and Python interpreter will be installed and configured automatically inside the web application container.
 
