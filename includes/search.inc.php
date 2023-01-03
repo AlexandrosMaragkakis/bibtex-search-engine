@@ -121,7 +121,7 @@
             break;
             
         case 'title':
-            $processed_query = str_replace(' ', '%20', $query);
+            $processed_query = str_replace(' ', '%20', $processed_query);
             $solr_api = 'select?debug.explain.structured=false&debug=results&debugQuery=false&hl.fl=*&hl.fragsize=100';
             $solr_api .= '&hl.method=fastVector&hl.requireFieldMatch=true&hl.simple.post=%3C%2Fb%3E&hl.simple.pre=%3Cb%3E&hl.snippets=1';
             $solr_api .= '&hl.usePhraseHighLighter=true&hl=true&fl=author%2Cid&indent=true&q.op=OR&rows='.$numResults.'&q=title:'.$processed_query.'&useParams=';
@@ -153,7 +153,7 @@
             break;
             
         case 'booktitle':
-            $processed_query = str_replace(' ', '%20', $query);
+            $processed_query = str_replace(' ', '%20', $processed_query);
             $solr_api = 'select?debug.explain.structured=false&debug=results&debugQuery=false&hl.fl=*&hl.fragsize=100';
             $solr_api .= '&hl.method=fastVector&hl.requireFieldMatch=true&hl.simple.post=%3C%2Fb%3E&hl.simple.pre=%3Cb%3E&hl.snippets=1';
             $solr_api .= '&hl.usePhraseHighLighter=true&hl=true&fl=author%2Cid&indent=true&q.op=OR&rows='.$numResults.'&q=booktitle:'.$processed_query.'&useParams=';
@@ -185,7 +185,7 @@
             break;
             
         case 'journal':
-            $processed_query = str_replace(' ', '%20', $query);
+            $processed_query = str_replace(' ', '%20', $processed_query);
             $solr_api = 'select?debug.explain.structured=false&debug=results&debugQuery=false&hl.fl=*&hl.fragsize=100';
             $solr_api .= '&hl.method=fastVector&hl.requireFieldMatch=true&hl.simple.post=%3C%2Fb%3E&hl.simple.pre=%3Cb%3E&hl.snippets=1';
             $solr_api .= '&hl.usePhraseHighLighter=true&hl=true&fl=author%2Cid&indent=true&q.op=OR&rows='.$numResults.'&q=journal:'.$processed_query.'&useParams=';
