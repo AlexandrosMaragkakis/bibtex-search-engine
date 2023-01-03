@@ -73,4 +73,4 @@ The Python libraries and Python interpreter will be installed and configured aut
 ## Authors
 
 - [Alexandros Maragkakis](https://github.com/AlexandrosMaragkakis)
-- Zamir Osmenaj
+- [Zamir Osmenaj](https://github.com/14eyedraven)
