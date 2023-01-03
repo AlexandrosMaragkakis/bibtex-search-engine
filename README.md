@@ -47,7 +47,7 @@ These instructions will get you a copy of the project up and running on your loc
    cd [repository-name]
    ```
 
-### Executing program
+### Executing
 
 **_Linux and macOS users:_**
 
