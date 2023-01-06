@@ -8,7 +8,7 @@ The application is implemented using HTML, CSS, JavaScript, jQuery, Ajax, Python
 
 Installation and usage instructions can be found in this readme file.
 
-We would like to acknowledge our professors Costas Vassilakis and Christos Tryfonopoulos for their assistance in the development and utilization of Docker in this project.
+We would like to acknowledge our professors Costas Vassilakis and Christos Tryfonopoulos for their assistance in the utilization of Docker in this project.
 
 ## Getting Started
 
