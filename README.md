@@ -38,7 +38,7 @@ These instructions will get you a copy of the project up and running on your loc
    If you are using Linux or macOS, you need to adjust the file permissions of the project directory after cloning the repository. To do this, run the following command:
 
    ```
-   sudo chmod -R 777 [project-directory]
+   sudo chmod -R 777 [repository-name]
    ```
 
 3. Navigate to the project directory:
